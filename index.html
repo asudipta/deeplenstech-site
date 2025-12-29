@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Services for Coaches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 18px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .services {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .service-item h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .testimonials {
+            padding: 80px 20px;
+            background: #667eea;
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Grow Your Coaching Business with Social Media</h1>
+            <p class="subtitle">Professional social media management designed specifically for coaches who want to attract more clients and build authority online</p>
+            <button class="cta-button" onclick="scrollToCTA()">Get Started Today</button>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Coaches Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Save Time</h3>
+                    <p>Focus on coaching your clients while we handle your entire social media presence. Get hours back in your week to do what you do best.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Grow Your Audience</h3>
+                    <p>Strategic content that attracts your ideal clients and positions you as the go-to expert in your coaching niche.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>Professional Quality</h3>
+                    <p>Polished, engaging content that reflects your expertise and builds trust with potential clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive social media solutions tailored for coaching professionals</p>
+            <div class="service-list">
+                <div class="service-item">
+                    <h4>Content Creation</h4>
+                    <p>Custom posts, graphics, and videos that showcase your coaching philosophy and attract ideal clients</p>
+                </div>
+                <div class="service-item">
+                    <h4>Strategy & Planning</h4>
+                    <p>Data-driven social media strategy aligned with your business goals and target audience</p>
+                </div>
+                <div class="service-item">
+                    <h4>Community Management</h4>
+                    <p>Engage with your audience, respond to comments, and build meaningful connections</p>
+                </div>
+                <div class="service-item">
+                    <h4>Analytics & Reporting</h4>
+                    <p>Track your growth with clear metrics and insights that matter for your coaching business</p>
+                </div>
+                <div class="service-item">
+                    <h4>Platform Management</h4>
+                    <p>Complete management of Instagram, LinkedIn, Facebook, and other platforms where your clients are</p>
+                </div>
+                <div class="service-item">
+                    <h4>Brand Development</h4>
+                    <p>Create a consistent, recognizable brand identity across all your social channels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Coaches Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Since working with them, my social media has become my #1 source of new clients. They understand the coaching industry perfectly."</p>
+                    <p class="testimonial-author">— Sarah M., Life Coach</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I finally have time to focus on my clients instead of stressing about what to post. My engagement has tripled!"</p>
+                    <p class="testimonial-author">— Michael T., Business Coach</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Professional, strategic, and they truly get what coaches need. My online presence has never looked better."</p>
+                    <p class="testimonial-author">— Jennifer L., Health Coach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Social Media?</h2>
+            <p>Let's discuss how we can help you attract more clients and grow your coaching business</p>
+            <button class="cta-button" onclick="handleContact()">Schedule a Free Consultation</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Social Media Services for Coaches. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToCTA() {
+            document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleContact() {
+            alert('Contact form would open here. Replace this with your preferred contact method (email link, calendar booking, contact form, etc.)');
+        }
+    </script>
+</body>
+</html>

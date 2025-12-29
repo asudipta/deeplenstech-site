@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Batching Workbook for Coaches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        .lead-magnet {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .eyebrow {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .headline {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .subheadline {
+            font-size: 20px;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+        
+        .benefit-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .benefit-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .form-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .form-headline {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .privacy-text {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+        
+        .preview-section {
+            margin-top: 40px;
+            border-top: 2px solid #e0e0e0;
+            padding-top: 40px;
+        }
+        
+        .preview-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .preview-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .preview-item {
+            display: flex;
+            align-items: start;
+            gap: 15px;
+        }
+        
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .preview-text {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .success-message h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .success-message p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 32px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .header, .content, .form-section {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lead-magnet">
+            <div class="header">
+                <div class="eyebrow">FREE WORKBOOK FOR COACHES</div>
+                <h1 class="headline">Batch 30 Days of Content in Just 2 Hours</h1>
+                <p class="subheadline">The proven framework that helps coaches reclaim 20+ hours per month while staying visible online</p>
+            </div>
+            
+            <div class="content">
+                <div class="benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⚡</div>
+                        <h3 class="benefit-title">Save 20+ Hours</h3>
+                        <p class="benefit-text">Stop scrambling daily. Create an entire month of content in one focused session.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📈</div>
+                        <h3 class="benefit-title">Stay Consistent</h3>
+                        <p class="benefit-text">Show up daily for your audience without the daily stress and decision fatigue.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💡</div>
+                        <h3 class="benefit-title">Never Run Out of Ideas</h3>
+                        <p class="benefit-text">Get 30+ content ideas and proven templates that convert followers to clients.</p>
+                    </div>
+                </div>
+                
+                <div class="preview-section">
+                    <h2 class="preview-title">Inside This Free Workbook:</h2>
+                    <div class="preview-items">
+                        <div class="preview-item">
+                            <div class="check-icon">✓</div>
+                            <p class="preview-text"><strong>The 2-Hour Content Batching Blueprint:</strong> Step-by-step system to plan, create, and schedule 30 days of content</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="check-icon">✓</div>
+                            <p class="preview-text"><strong>30+ Content Idea Prompts:</strong> Never stare at a blank screen again with our proven idea generation framework</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="check-icon">✓</div>
+                            <p class="preview-text"><strong>10 Plug-and-Play Caption Templates:</strong> High-converting formats used by top coaches to attract dream clients</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="check-icon">✓</div>
+                            <p class="preview-text"><strong>Content Calendar Template:</strong> Organize your content pillars and maintain strategic consistency</p>
+                        </div>
+                        <div class="preview-item">
+                            <div class="check-icon">✓</div>
+                            <p class="preview-text"><strong>Engagement Boosters Checklist:</strong> Proven tactics to increase saves, shares, and comments on every post</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <div id="formContainer">
+                        <h2 class="form-headline">Get Instant Access to Your Free Workbook</h2>
+                        <form id="leadForm">
+                            <div class="form-group">
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <button type="submit" class="submit-btn">SEND ME THE WORKBOOK →</button>
+                            <p class="privacy-text">🔒 Your information is 100% secure. We respect your privacy and will never spam you.</p>
+                        </form>
+                    </div>
+                    
+                    <div id="successMessage" class="success-message">
+                        <h3>🎉 Check Your Email!</h3>
+                        <p>Your Content Batching Workbook is on its way. Check your inbox (and spam folder) in the next few minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Here you would integrate with your email service provider
+            // For now, we'll simulate a successful submission
+            console.log('Form submitted:', { name, email });
+            
+            // Hide form and show success message
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+            
+            // In a real implementation, you'd send this data to your email marketing platform
+            // Example: ConvertKit, Mailchimp, ActiveCampaign, etc.
+        });
+    </script>
+</body>
+</html>
