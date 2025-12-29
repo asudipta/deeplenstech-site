@@ -308,50 +308,30 @@
                 </div>
                 
                 <div class="form-section">
-                    <div id="formContainer">
-                        <h2 class="form-headline">Get Instant Access to Your Free Workbook</h2>
-                        <form id="leadForm">
-                            <div class="form-group">
-                                <label for="name">First Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your first name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                            </div>
-                            <button type="submit" class="submit-btn">SEND ME THE WORKBOOK →</button>
-                            <p class="privacy-text">🔒 Your information is 100% secure. We respect your privacy and will never spam you.</p>
-                        </form>
-                    </div>
+                    <h2 class="form-headline" style="text-align: center; margin-bottom: 30px;">Get Instant Access to Your Free Workbook</h2>
                     
-                    <div id="successMessage" class="success-message">
-                        <h3>🎉 Check Your Email!</h3>
-                        <p>Your Content Batching Workbook is on its way. Check your inbox (and spam folder) in the next few minutes.</p>
-                    </div>
+                    <!-- ConvertKit Form Embed -->
+                    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                    <form action="https://app.kit.com/forms/8915367/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8915367" data-uid="28f1c21fd3" data-format="inline" data-version="5" style="background-color: transparent; border: none; box-shadow: none; padding: 0;">
+                        <div data-element="fields" class="seva-fields formkit-fields">
+                            <div class="formkit-field">
+                                <input class="formkit-input" aria-label="First Name" style="color: rgb(77, 77, 77); border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; padding: 15px; width: 100%; margin-bottom: 20px;" name="fields[first_name]" required="" placeholder="First Name" type="text">
+                            </div>
+                            <div class="formkit-field">
+                                <input class="formkit-input" name="email_address" style="color: rgb(77, 77, 77); border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; padding: 15px; width: 100%; margin-bottom: 20px;" aria-label="Email Address" placeholder="Email Address" required="" type="email">
+                            </div>
+                            <button data-element="submit" class="formkit-submit" style="width: 100%; padding: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: transform 0.2s;">
+                                <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                                <span>SEND ME THE WORKBOOK →</span>
+                            </button>
+                        </div>
+                        <p style="text-align: center; font-size: 12px; color: #999; margin-top: 20px;">🔒 Your information is 100% secure. We respect your privacy and will never spam you.</p>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     
-    <script>
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            // Here you would integrate with your email service provider
-            // For now, we'll simulate a successful submission
-            console.log('Form submitted:', { name, email });
-            
-            // Hide form and show success message
-            document.getElementById('formContainer').style.display = 'none';
-            document.getElementById('successMessage').classList.add('show');
-            
-            // In a real implementation, you'd send this data to your email marketing platform
-            // Example: ConvertKit, Mailchimp, ActiveCampaign, etc.
-        });
-    </script>
+    <!-- ConvertKit handles form submission automatically -->
 </body>
 </html>
