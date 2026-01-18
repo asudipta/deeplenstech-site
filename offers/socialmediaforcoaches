@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Management for Coaches | Scale Your Authority</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- PSYCHOLOGY-DRIVEN CSS VARIABLES --- */
+        :root {
+            /* COLOR PSYCHOLOGY: 
+               Navy = Trust, Intelligence, Authority. 
+               Gold = Value, Success, High-Ticket. 
+               White Space = Luxury. 
+            */
+            --bg-body: #F9FAFB;
+            --bg-white: #FFFFFF;
+            --text-main: #1F2937;
+            --text-muted: #4B5563;
+            --primary-navy: #111827;
+            --accent-gold: #D97706;
+            --accent-gold-hover: #B45309;
+            --border-light: #E5E7EB;
+            --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-navy);
+            line-height: 1.2;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        /* --- BUTTONS (The "CTA" Trigger) --- */
+        .btn {
+            display: inline-block;
+            padding: 18px 42px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border-radius: 50px;
+            /* Rounded corners feel friendlier/safer */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-navy);
+            color: var(--bg-white);
+            box-shadow: 0 4px 14px 0 rgba(17, 24, 39, 0.39);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            /* Micro-interaction: "Lift" suggests clickability */
+            box-shadow: 0 6px 20px rgba(17, 24, 39, 0.23);
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(217, 119, 6, 0.39);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        /* --- HERO SECTION (Above the Fold) --- */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, #FFFFFF, #F3F4F6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tagline {
+            display: inline-block;
+            background: #EFF6FF;
+            color: #2563EB;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            /* Large scale establishes dominance */
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- PROBLEM SECTION (Agitation) --- */
+        .problem-section {
+            background: var(--bg-white);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .problem-card {
+            padding: 40px;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+
+        /* Psychology: Hover effects create a sense of tactile interaction */
+        .problem-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .problem-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* --- MECHANISM (The "How") --- */
+        .mechanism {
+            background-color: var(--primary-navy);
+            color: var(--bg-white);
+        }
+
+        .mechanism h2 {
+            color: var(--bg-white);
+        }
+
+        .mechanism p {
+            color: #9CA3AF;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .step-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+        }
+
+        /* --- PRICING (Anchoring Bias) --- */
+        .pricing-section {
+            background: var(--bg-body);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: center;
+            /* Centers cards vertically */
+        }
+
+        .pricing-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            border: 1px solid transparent;
+        }
+
+        /* The Decoy Effect: Make the middle card pop */
+        .pricing-card.popular {
+            transform: scale(1.05);
+            border: 2px solid var(--accent-gold);
+            box-shadow: var(--shadow-hover);
+            z-index: 2;
+        }
+
+        .price-tag {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin: 20px 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .step-row {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <span class="hero-tagline">For Elite Coaches & Consultants</span>
+            <h1>Stop Being the "Best Kept Secret" in Your Niche.</h1>
+            <p>You have the expertise. We have the ecosystem. We turn your social media into a client-acquisition
+                asset—without you spending hours on Canva.</p>
+
+            <div style="margin-top: 40px;">
+                <a href="#pricing" class="btn btn-primary">View My Offers</a>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: #9CA3AF;">Currently accepting 2 new clients for
+                    February.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding problem-section">
+        <div class="container">
+            <div class="text-center">
+                <h2>The Cost of Invisibility</h2>
+                <p>Great coaching programs die every day because nobody knows they exist.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="problem-card">
+                    <span class="problem-icon">📉</span>
+                    <h3>The Feast & Famine Cycle</h3>
+                    <p>You rely on referrals. When they dry up, your income dries up. You have no predictable system to
+                        generate new leads.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">🕰️</span>
+                    <h3>The "Hourly" Trap</h3>
+                    <p>You're charging premium prices, but spending minimum-wage hours scrolling for trending audio and
+                        editing Reels.</p>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">👻</span>
+                    <h3>The Trust Gap</h3>
+                    <p>Your prospects look you up. They see a profile posted 3 weeks ago. They assume you aren't
+                        serious. They buy from your competitor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding mechanism">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2>The "Authority Ecosystem" Method</h2>
+                <p>We don't just "post." We engineer influence.</p>
+            </div>
+
+            <div class="step-row">
+                <div style="flex: 1;">
+                    <div class="step-number">01</div>
+                    <h3>Strategic Positioning</h3>
+                    <p>We audit your offer. We don't post fluff; we create content specifically designed to handle
+                        objections before your sales call even happens.</p>
+                </div>
+                <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px;">
+                    <p style="color:white; font-style: italic;">"What keeps your ideal client up at night? We write
+                        about THAT."</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div style="flex: 1;">
+                    <div class="step-number">02</div>
+                    <h3>High-Fidelity Content</h3>
+                    <p>Your brand is an extension of your coaching fee. If your content looks cheap, clients assume your
+                        coaching is cheap. We elevate your visual standard instantly.</p>
+                </div>
+                <div style="flex: 1; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px;">
+                    <p style="color:white; font-style: italic;">"Premium fonts. Psychological hooks. Visuals that stop
+                        the scroll."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding pricing-section" id="pricing">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2>Invest in Your Growth</h2>
+                <p>Choose the velocity of your results.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Maintenance</h3>
+                    <div class="price-tag">$997<span class="price-period">/mo</span></div>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px;">For established coaches who just need to "keep
+                        the lights on."</p>
+                    <ul class="check-list">
+                        <li>12 Static Posts Per Month</li>
+                        <li>Basic Caption Copywriting</li>
+                        <li>Scheduling & Publishing</li>
+                        <li>Monthly Report</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary"
+                        style="background: white; color: var(--primary-navy); border: 1px solid var(--border-light); width: 100%;">Get
+                        Started</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div
+                        style="background: var(--accent-gold); color: white; padding: 5px 15px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                        RECOMMENDED</div>
+                    <h3>Authority Growth</h3>
+                    <div class="price-tag">$1,997<span class="price-period">/mo</span></div>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px;">For coaches ready to dominate their niche and
+                        attract leads.</p>
+                    <ul class="check-list">
+                        <li><strong>Everything in Maintenance</strong></li>
+                        <li>4 Short-Form Videos (Reels)</li>
+                        <li>Daily Community Engagement</li>
+                        <li>Competitor Analysis</li>
+                        <li>Story Strategy (The "Selling" layer)</li>
+                    </ul>
+                    <a href="#" class="btn btn-gold" style="width: 100%;">Apply for this Tier</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Full Ecosystem</h3>
+                    <div class="price-tag">$3,500<span class="price-period">/mo</span></div>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px;">Complete "Done-For-You" marketing department.</p>
+                    <ul class="check-list">
+                        <li>Daily Content (Static + Video)</li>
+                        <li>Funnel Optimization</li>
+                        <li>DM Appointment Setting Scripts</li>
+                        <li>Launch Campaign Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary"
+                        style="background: white; color: var(--primary-navy); border: 1px solid var(--border-light); width: 100%;">Contact
+                        to Qualify</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding text-center" style="background: #FFFFFF;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Not sure which you need?</h2>
+            <p style="max-width: 600px; margin: 0 auto 40px auto; color: var(--text-muted);">
+                Let's have a 15-minute "No-Pitch" strategy chat. If we aren't a fit, I'll give you a free content
+                roadmap you can use yourself.
+            </p>
+            <a href="#" class="btn btn-primary">Book Your Free Strategy Audit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DeepLensTech. Building Authority for Coaches.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
