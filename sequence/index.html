@@ -4,17 +4,20 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>The LinkedIn Sales Sequence — ₹2,250</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --black: #000000;
-  --white: #FFFFFF;
+  --black: #0a0a0a;
+  --white: #F5F5F0;
   --yellow: #DFFF00;
-  --red: #FF3333;
+  --red: #E8341C;
   --dark: #0a0a0a;
-  --card: #111111;
+  --card: #141414;
+  --card-light: #EBEBEB;
   --border: #2a2a2a;
-  --muted: #666666;
+  --border-light: #D0D0D0;
+  --muted: #888888;
+  --muted-light: #555555;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -23,15 +26,85 @@ html { scroll-behavior:smooth; }
 body {
   background: var(--black);
   color: var(--white);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
+
+/* ALTERNATING SECTION BACKGROUNDS */
+.section-dark {
+  background: var(--black);
+  color: var(--white);
+}
+.section-light {
+  background: var(--white);
+  color: var(--black);
+}
+.section-light h2 { color: var(--black); }
+.section-light h2 em { color: var(--red) !important; }
+.section-light .section-tag { color: var(--red); }
+.section-light .section-tag::after { background: #ccc; }
+.section-light .del-title { color: var(--black); }
+.section-light .del-num { color: #ddd; }
+.section-light .del-val { color: var(--black) !important; }
+.section-light .del-val small { color: #999; }
+.section-light .del-row::before { background: var(--black); }
+.section-light .del-row { background: #F7F7F5; border-color: #E0E0E0; }
+.section-light .del-row:hover { border-color: var(--black); }
+.section-light .del-row.bonus { border-color: var(--red) !important; }
+.section-light .del-bonus-title { color: var(--red) !important; }
+.section-light .del-row.bonus .del-val { color: var(--red) !important; }
+.section-light .del-desc { color: #555; }
+.section-light .vtable-wrap { border-color: var(--black) !important; }
+.section-light .vtable-head { background: var(--black) !important; color: var(--white) !important; }
+.section-light .vtable-row { border-color: #E0E0E0; background: #F7F7F5; }
+.section-light .vtable-name { color: #333 !important; }
+.section-light .vtable-price { color: #bbb !important; }
+.section-light .vtable-total { background: var(--black) !important; }
+.section-light .vtotal-label { color: #999 !important; }
+.section-light .vtotal-price { color: var(--yellow) !important; }
+.section-light .btn-yellow { background: var(--black); color: var(--white); border-color: var(--black); }
+.section-light .btn-yellow:hover { background: transparent; color: var(--black); }
+.section-light .bridge { background: var(--black); color: var(--white); }
+.section-light .bridge em { color: var(--yellow); }
+.section-light .guarantee-box { background: #F7F7F5; border-color: #E0E0E0; }
+.section-light .g-stamp { border-color: var(--black); }
+.section-light .g-stamp::before { border-color: rgba(0,0,0,0.2); }
+.section-light .g-days { color: var(--black); }
+.section-light .g-text { color: var(--black); }
+.section-light .g-title { color: var(--black); }
+.section-light .g-title span { color: var(--red) !important; }
+.section-light .g-title strong { color: var(--red); }
+.section-light .guarantee-box::after { color: rgba(0,0,0,0.04); }
+.section-light .faq-item { background: #F7F7F5; border-color: #E0E0E0; }
+.section-light .faq-q { color: var(--black); }
+.section-light .faq-q:hover { color: var(--red); }
+.section-light .faq-icon { color: var(--black); }
+.section-light .faq-a { color: #555; }
+.section-light .section-tag { letter-spacing: 4px; font-size: 11px; font-weight: 600; }
+.section-light .agit-item { background: #F0F0EC; border-color: #D5D5D5; }
+.section-light .agit-item:hover { border-color: var(--red); }
+.section-light .agit-copy strong { color: var(--black); }
+.section-light .agit-copy span { color: #666; }
+.section-light .bridge { background: var(--black); color: var(--white); border-left-color: var(--yellow); }
+.section-light .seq-card { background: #F0F0EC; border-color: #D5D5D5; }
+.section-light .seq-card:hover { border-color: var(--black); }
+.section-light .seq-num { color: #D5D5D5; }
+.section-light .seq-body { color: #555; }
+.section-light .seq-plus { background: #E8E8E3; }
+.section-light .seq-plus-item { border-color: #D5D5D5; }
+.section-light .seq-plus-body { color: #666; }
+.section-light .testi-card { background: #F0F0EC; border-color: #D5D5D5; }
+.section-light .testi-card:hover { border-color: var(--black); }
+.section-light .testi-quote { color: #333; }
+.section-light .testi-name { color: var(--black); }
+.section-light .testi-role { color: #777; }
+.section-light hr.rule-inner { border-color: #D5D5D5; }
 
 /* ── TICKER ── */
 .ticker {
   background: var(--yellow);
   color: var(--black);
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px;
   letter-spacing: 3px;
   padding: 9px 0;
@@ -58,7 +131,7 @@ nav {
   z-index: 200;
 }
 .brand {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 18px;
   letter-spacing: 4px;
   color: var(--yellow);
@@ -66,7 +139,7 @@ nav {
 .nav-btn {
   background: var(--yellow);
   color: var(--black);
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
   padding: 11px 26px;
@@ -98,7 +171,7 @@ nav {
   display: inline-block;
   background: var(--red);
   color: var(--white);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   letter-spacing: 4px;
   padding: 5px 14px;
@@ -106,10 +179,10 @@ nav {
   text-transform: uppercase;
 }
 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(52px, 6.5vw, 88px);
   line-height: 0.93;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   text-transform: uppercase;
   margin-bottom: 28px;
 }
@@ -138,7 +211,7 @@ h1 .red-txt { color: var(--red); }
   display: inline-block;
   background: var(--yellow);
   color: var(--black);
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 20px;
   letter-spacing: 2px;
   padding: 20px 44px;
@@ -245,7 +318,7 @@ h1 .red-txt { color: var(--red); }
   max-width: 180px;
 }
 h2 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(38px, 4.5vw, 60px);
   line-height: 0.95;
   text-transform: uppercase;
@@ -272,7 +345,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   transition: border-color 0.15s;
 }
 .agit-item:hover { border-color: var(--red); }
-.agit-x { color: var(--red); font-family: 'Anton', sans-serif; font-size: 24px; flex-shrink:0; line-height:1; }
+.agit-x { color: var(--red); font-family: 'Barlow Condensed', sans-serif; font-size: 24px; flex-shrink:0; line-height:1; }
 .agit-copy strong { display:block; font-size:13px; color:var(--white); margin-bottom:5px; letter-spacing:0.5px; }
 .agit-copy span { font-size:12px; color:#777; line-height:1.7; }
 
@@ -281,7 +354,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   background: var(--card);
   border-left: 4px solid var(--yellow);
   padding: 24px 32px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 22px;
   letter-spacing: 1px;
 }
@@ -314,14 +387,14 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
 .seq-card:hover { border-color: var(--yellow); }
 .seq-card:hover::before { transform: scaleX(1); }
 .seq-num {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 64px;
   color: #1a1a1a;
   line-height: 1;
   margin-bottom: 16px;
 }
 .seq-title {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -342,7 +415,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   padding: 20px;
   border: 1px solid var(--border);
 }
-.seq-plus-title { font-family:'Anton',sans-serif; font-size:15px; letter-spacing:1px; margin-bottom:8px; }
+.seq-plus-title { font-family:'Barlow Condensed',sans-serif; font-size:15px; letter-spacing:1px; margin-bottom:8px; }
 .seq-plus-body { font-size:12px; color:#777; line-height:1.7; }
 
 /* ── DELIVERABLES ── */
@@ -370,11 +443,11 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
 .del-row:hover { border-color:var(--yellow); }
 .del-row:hover::before { transform:scaleY(1); }
 .del-row.bonus { border-color: rgba(223,255,0,0.3); }
-.del-num { font-family:'Anton',sans-serif; font-size:36px; color:#222; line-height:1; }
-.del-title { font-family:'Anton',sans-serif; font-size:18px; letter-spacing:0.5px; margin-bottom:6px; }
+.del-num { font-family:'Barlow Condensed',sans-serif; font-size:36px; color:#222; line-height:1; }
+.del-title { font-family:'Barlow Condensed',sans-serif; font-size:18px; letter-spacing:0.5px; margin-bottom:6px; }
 .del-desc { font-size:12px; color:#777; line-height:1.6; }
-.del-val { font-family:'Anton',sans-serif; font-size:20px; color:var(--yellow); text-align:right; white-space:nowrap; }
-.del-val small { display:block; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#444; letter-spacing:2px; }
+.del-val { font-family:'Barlow Condensed',sans-serif; font-size:20px; color:var(--yellow); text-align:right; white-space:nowrap; }
+.del-val small { display:block; font-family:'Inter',sans-serif; font-size:9px; color:#444; letter-spacing:2px; }
 
 /* ── VALUE TABLE ── */
 .vtable-wrap {
@@ -385,7 +458,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
 .vtable-head {
   background: var(--yellow);
   color: var(--black);
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
   letter-spacing: 3px;
   padding: 14px 28px;
@@ -396,23 +469,23 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   display: flex;
   justify-content: space-between;
   padding: 16px 28px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-light);
   font-size: 13px;
 }
 .vtable-row:last-of-type { border-bottom: none; }
 .vtable-name { color: #bbb; }
-.vtable-price { color: #555; text-decoration: line-through; font-family:'Anton',sans-serif; }
+.vtable-price { color: #555; text-decoration: line-through; font-family:'Barlow Condensed',sans-serif; }
 .vtable-total {
-  background: #000;
+  background: var(--black);
   border-top: 2px solid var(--yellow);
   padding: 24px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.vtotal-label { font-family:'Anton',sans-serif; font-size:14px; letter-spacing:2px; color:#666; }
-.vtotal-price { font-family:'Anton',sans-serif; font-size:52px; color:var(--yellow); line-height:1; }
-.vtotal-was { font-family:'IBM Plex Mono',monospace; font-size:13px; color:#444; text-decoration:line-through; margin-right:12px; vertical-align:middle; }
+.vtotal-label { font-family:'Barlow Condensed',sans-serif; font-size:14px; letter-spacing:2px; color:#666; }
+.vtotal-price { font-family:'Barlow Condensed',sans-serif; font-size:52px; color:var(--yellow); line-height:1; }
+.vtotal-was { font-family:'Inter',sans-serif; font-size:13px; color:#444; text-decoration:line-through; margin-right:12px; vertical-align:middle; }
 
 /* ── TESTIMONIALS ── */
 .testi-grid {
@@ -429,7 +502,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
 .testi-card:hover { border-color: var(--yellow); }
 .testi-stars { color:var(--yellow); font-size:13px; letter-spacing:4px; margin-bottom:18px; }
 .testi-quote { font-size:13px; line-height:1.8; color:#ccc; margin-bottom:22px; font-style:italic; }
-.testi-name { font-family:'Anton',sans-serif; font-size:14px; letter-spacing:1px; color:var(--yellow); }
+.testi-name { font-family:'Barlow Condensed',sans-serif; font-size:14px; letter-spacing:1px; color:var(--yellow); }
 .testi-role { font-size:10px; color:#555; letter-spacing:1px; margin-top:4px; }
 
 /* ── GUARANTEE ── */
@@ -449,7 +522,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   position:absolute;
   right:-60px; top:50%;
   transform:translateY(-50%) rotate(90deg);
-  font-family:'Anton',sans-serif;
+  font-family:'Barlow Condensed',sans-serif;
   font-size:90px;
   color:rgba(223,255,0,0.025);
   white-space:nowrap;
@@ -466,6 +539,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   transform: rotate(-12deg);
   flex-shrink: 0;
   position: relative;
+  flex-shrink: 0;
 }
 .g-stamp::before {
   content:'';
@@ -474,10 +548,10 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   border:1px solid rgba(223,255,0,0.3);
   border-radius:50%;
 }
-.g-days { font-family:'Anton',sans-serif; font-size:42px; color:var(--yellow); line-height:1; }
+.g-days { font-family:'Barlow Condensed',sans-serif; font-size:42px; color:var(--yellow); line-height:1; }
 .g-text { font-size:9px; letter-spacing:2px; color:var(--yellow); text-align:center; line-height:1.5; }
-.g-title { font-family:'Anton',sans-serif; font-size:26px; line-height:1.1; margin-bottom:18px; }
-.g-body { font-size:13px; line-height:1.9; color:#999; }
+.g-title { font-family:'Barlow Condensed',sans-serif; font-size:26px; line-height:1.1; margin-bottom:18px; color: var(--white); }
+.g-body { font-size:13px; line-height:1.9; color:#aaa; }
 .g-body strong { color:var(--white); }
 
 /* ── URGENCY BAR ── */
@@ -488,7 +562,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 15px;
   letter-spacing: 2px;
   text-align: center;
@@ -509,7 +583,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   gap: 64px;
   align-items: start;
 }
-.form-head { font-family:'Anton',sans-serif; font-size:26px; margin-bottom:8px; }
+.form-head { font-family:'Barlow Condensed',sans-serif; font-size:26px; margin-bottom:8px; }
 .form-sub { font-size:12px; color:#666; margin-bottom:32px; line-height:1.7; }
 
 .field { margin-bottom:20px; }
@@ -526,7 +600,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   background:#0d0d0d;
   border:1px solid var(--border);
   color:var(--white);
-  font-family:'IBM Plex Mono',monospace;
+  font-family:'Inter',sans-serif;
   font-size:13px;
   padding:14px 16px;
   outline:none;
@@ -546,7 +620,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   margin-bottom: 16px;
 }
 .price-was { font-size:12px; color:#555; letter-spacing:2px; text-decoration:line-through; margin-bottom:4px; }
-.price-big { font-family:'Anton',sans-serif; font-size:76px; color:var(--yellow); line-height:1; }
+.price-big { font-family:'Barlow Condensed',sans-serif; font-size:76px; color:var(--yellow); line-height:1; }
 .price-note { font-size:10px; color:#555; letter-spacing:2px; margin-top:8px; }
 .includes { margin-top:24px; padding-top:24px; border-top:1px solid var(--border); }
 .includes-title { font-size:10px; letter-spacing:3px; color:#444; margin-bottom:16px; text-transform:uppercase; }
@@ -558,7 +632,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   width:100%;
   background:var(--yellow);
   color:var(--black);
-  font-family:'Anton',sans-serif;
+  font-family:'Barlow Condensed',sans-serif;
   font-size:22px;
   letter-spacing:2px;
   padding:22px;
@@ -594,7 +668,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
 }
 .faq-q {
   padding:22px 28px;
-  font-family:'Anton',sans-serif;
+  font-family:'Barlow Condensed',sans-serif;
   font-size:16px;
   letter-spacing:0.5px;
   cursor:pointer;
@@ -602,6 +676,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
   justify-content:space-between;
   align-items:center;
   transition:color 0.15s;
+  color: var(--white);
 }
 .faq-q:hover { color:var(--yellow); }
 .faq-icon { color:var(--yellow); font-size:24px; transition:transform 0.3s; flex-shrink:0; }
@@ -619,15 +694,16 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
 
 /* ── FOOTER ── */
 footer {
-  border-top:1px solid var(--border);
+  border-top:1px solid #333;
   padding:40px 48px;
+  background: var(--black);
   display:flex;
   justify-content:space-between;
   align-items:center;
   max-width:1140px;
   margin:0 auto;
 }
-.footer-brand { font-family:'Anton',sans-serif; font-size:18px; color:var(--yellow); letter-spacing:3px; }
+.footer-brand { font-family:'Barlow Condensed',sans-serif; font-size:18px; color:var(--yellow); letter-spacing:3px; }
 .footer-copy { font-size:10px; color:#333; margin-top:6px; letter-spacing:1px; }
 .footer-right { text-align:right; font-size:10px; line-height:2.2; color:#444; letter-spacing:1px; }
 .footer-email { color:var(--yellow); }
@@ -712,10 +788,10 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- PROBLEM -->
-<div class="section fi">
+<div class="section fi section-light" style="background:var(--white);color:var(--black);">
   <div class="section-tag">// THE PROBLEM</div>
   <h2>WHY YOUR LINKEDIN<br/><span class="red-h">OUTREACH IS FAILING.</span></h2>
   <div class="agit-grid">
@@ -768,10 +844,10 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- SOLUTION -->
-<div class="section fi">
+<div class="section fi section-dark">
   <div class="section-tag">// THE SOLUTION</div>
   <h2>THE 3-TOUCH<br/><em>CONVERSATION SYSTEM.</em></h2>
   <div class="sequence-grid">
@@ -803,10 +879,10 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- DELIVERABLES -->
-<div class="section fi">
+<div class="section fi section-light" style="background:var(--white);color:var(--black);">
   <div class="section-tag">// WHAT'S INSIDE</div>
   <h2>EVERYTHING YOU GET<br/><em>FOR ₹2,250.</em></h2>
   <div class="del-list">
@@ -853,7 +929,7 @@ footer {
     <div class="del-row bonus">
       <div class="del-num" style="color:var(--yellow)">★</div>
       <div>
-        <div class="del-title" style="color:var(--yellow)">FREE 30-MIN LINKEDIN AUDIT CALL</div>
+        <div class="del-title del-bonus-title" style="color:var(--yellow)">FREE 30-MIN LINKEDIN AUDIT CALL</div>
         <div class="del-desc">Personal review of your profile, targeting and outreach. Specific fixes for your niche. <strong style="color:var(--red)">Only 8 spots left this month.</strong></div>
       </div>
       <div class="del-val" style="color:var(--white)">₹16,000<small>VALUE</small></div>
@@ -881,10 +957,10 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- TESTIMONIALS -->
-<div class="section fi">
+<div class="section fi section-dark">
   <div class="section-tag">// SOCIAL PROOF</div>
   <h2>WHAT HAPPENED WHEN<br/><em>THEY USED IT.</em></h2>
   <div class="testi-grid">
@@ -909,10 +985,10 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- GUARANTEE -->
-<div class="section fi">
+<div class="section fi section-light" style="background:var(--white);color:var(--black);">
   <div class="section-tag">// THE GUARANTEE</div>
   <div class="guarantee-box">
     <div class="g-stamp">
@@ -938,7 +1014,7 @@ footer {
 </div>
 
 <!-- CHECKOUT -->
-<div class="section fi" id="checkout">
+<div class="section fi section-dark" id="checkout" style="background:var(--black);color:var(--white);">
   <div class="section-tag">// SECURE CHECKOUT</div>
   <h2>GET THE SEQUENCE.<br/><em>START BOOKING CALLS.</em></h2>
   <div class="checkout-grid">
@@ -968,6 +1044,10 @@ footer {
         You will receive access to the full sequence immediately after payment.<br/>
         Questions? Email us: <span style="color:var(--yellow)">sudiptab.digit@gmail.com</span>
       </div>
+      <button id="pay-btn" class="topmate-btn" style="margin-top:28px;width:100%;border:none;cursor:pointer;">
+        STEP 2 — PAY ₹2,250 &amp; GET INSTANT ACCESS →
+      </button>
+      <div style="font-size:10px;color:#444;text-align:center;margin-top:10px;letter-spacing:2px;">🔒 SECURE CHECKOUT VIA TOPMATE</div>
     </div>
 
     <!-- PAYMENT PANEL -->
@@ -987,9 +1067,9 @@ footer {
         </div>
       </div>
 
-      <a href="https://topmate.io/sudipta_banerjee11/2059443" class="topmate-btn" id="pay-btn" target="_blank" rel="noopener noreferrer">
+      <button id="pay-btn-side" class="topmate-btn" style="border:none;cursor:pointer;width:100%;">
         GET INSTANT ACCESS — ₹2,250 →
-      </a>
+      </button>
       <div class="pay-secure">🔒 SECURE CHECKOUT VIA TOPMATE · INSTANT DELIVERY</div>
 
       <div class="mini-guarantee">
@@ -1001,10 +1081,10 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- FAQ -->
-<div class="section fi">
+<div class="section fi section-light" style="background:var(--white);color:var(--black);">
   <div class="section-tag">// FAQ</div>
   <h2>QUESTIONS.<br/><em>ANSWERED.</em></h2>
   <div class="faq-list">
@@ -1035,7 +1115,7 @@ footer {
   </div>
 </div>
 
-<hr class="rule"/>
+<hr style="border:none;border-top:1px solid #222;margin:0;"/>
 
 <!-- FOOTER -->
 <footer>
@@ -1067,20 +1147,42 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.fi').forEach(el => obs.observe(el));
 
-// TOPMATE DIRECT LINK — no blocking
+// WEBHOOK + TOPMATE
 const TOPMATE = 'https://topmate.io/sudipta_banerjee11/2059443';
+const WEBHOOK = 'https://primary-production-c187.up.railway.app/webhook/new-buyer';
 
-document.getElementById('pay-btn').addEventListener('click', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('inp-name').value.trim();
-  const email = document.getElementById('inp-email').value.trim();
+async function handlePay() {
+  const name     = document.getElementById('inp-name').value.trim();
+  const email    = document.getElementById('inp-email').value.trim();
+  const linkedin = document.getElementById('inp-linkedin').value.trim();
+
   if (!name || !email) {
-    alert('Please fill in your name and email so we can send you the sequence.');
+    alert('Please fill in your name and email above so we can send you the sequence.');
     document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
     return;
   }
+
+  // Fire webhook — never blocks the buyer
+  try {
+    fetch(WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, linkedin, source: 'landing_page' })
+    });
+  } catch(err) {
+    console.log('Webhook error:', err);
+  }
+
+  // Always open Topmate
   window.open(TOPMATE, '_blank');
-});
+}
+
+// Main form button
+document.getElementById('pay-btn').addEventListener('click', handlePay);
+
+// Side panel button
+document.getElementById('pay-btn-side').addEventListener('click', handlePay);
 </script>
 </body>
 </html>
+
