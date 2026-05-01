@@ -1,1188 +1,1310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>The LinkedIn Sales Sequence — ₹2,250</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --black: #0a0a0a;
-  --white: #F5F5F0;
-  --yellow: #DFFF00;
-  --red: #E8341C;
-  --dark: #0a0a0a;
-  --card: #141414;
-  --card-light: #EBEBEB;
-  --border: #2a2a2a;
-  --border-light: #D0D0D0;
-  --muted: #888888;
-  --muted-light: #555555;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DM to Discovery | The Exact LinkedIn Outreach Sequence by Sudipta Banerjee</title>
+    <meta name="description" content="The exact LinkedIn outreach sequence used to book 3-5 discovery calls every single week. Results in 30 days or your money back.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+    <style>
+        :root {
+            --primary-bg: #0B1426;
+            --secondary-bg: #FFFFFF;
+            --accent: #C9A84C;
+            --text-dark: #F5F5F0;
+            --text-light: #1A1A2E;
+            --highlight-red: #E8341C;
+            --card-navy: #152238;
+            --font-headline: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --font-accent: 'Space Grotesk', sans-serif;
+            --transition: all 0.3s ease;
+        }
 
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* ALTERNATING SECTION BACKGROUNDS */
-.section-dark {
-  background: var(--black);
-  color: var(--white);
-}
-.section-light {
-  background: var(--white);
-  color: var(--black);
-}
-.section-light h2 { color: var(--black); }
-.section-light h2 em { color: var(--red) !important; }
-.section-light .section-tag { color: var(--red); }
-.section-light .section-tag::after { background: #ccc; }
-.section-light .del-title { color: var(--black); }
-.section-light .del-num { color: #ddd; }
-.section-light .del-val { color: var(--black) !important; }
-.section-light .del-val small { color: #999; }
-.section-light .del-row::before { background: var(--black); }
-.section-light .del-row { background: #F7F7F5; border-color: #E0E0E0; }
-.section-light .del-row:hover { border-color: var(--black); }
-.section-light .del-row.bonus { border-color: var(--red) !important; }
-.section-light .del-bonus-title { color: var(--red) !important; }
-.section-light .del-row.bonus .del-val { color: var(--red) !important; }
-.section-light .del-desc { color: #555; }
-.section-light .vtable-wrap { border-color: var(--black) !important; }
-.section-light .vtable-head { background: var(--black) !important; color: var(--white) !important; }
-.section-light .vtable-row { border-color: #E0E0E0; background: #F7F7F5; }
-.section-light .vtable-name { color: #333 !important; }
-.section-light .vtable-price { color: #bbb !important; }
-.section-light .vtable-total { background: var(--black) !important; }
-.section-light .vtotal-label { color: #999 !important; }
-.section-light .vtotal-price { color: var(--yellow) !important; }
-.section-light .btn-yellow { background: var(--black); color: var(--white); border-color: var(--black); }
-.section-light .btn-yellow:hover { background: transparent; color: var(--black); }
-.section-light .bridge { background: var(--black); color: var(--white); }
-.section-light .bridge em { color: var(--yellow); }
-.section-light .guarantee-box { background: #F7F7F5; border-color: #E0E0E0; }
-.section-light .g-stamp { border-color: var(--black); }
-.section-light .g-stamp::before { border-color: rgba(0,0,0,0.2); }
-.section-light .g-days { color: var(--black); }
-.section-light .g-text { color: var(--black); }
-.section-light .g-title { color: var(--black); }
-.section-light .g-title span { color: var(--red) !important; }
-.section-light .g-title strong { color: var(--red); }
-.section-light .guarantee-box::after { color: rgba(0,0,0,0.04); }
-.section-light .faq-item { background: #F7F7F5; border-color: #E0E0E0; }
-.section-light .faq-q { color: var(--black); }
-.section-light .faq-q:hover { color: var(--red); }
-.section-light .faq-icon { color: var(--black); }
-.section-light .faq-a { color: #555; }
-.section-light .section-tag { letter-spacing: 4px; font-size: 11px; font-weight: 600; }
-.section-light .agit-item { background: #F0F0EC; border-color: #D5D5D5; }
-.section-light .agit-item:hover { border-color: var(--red); }
-.section-light .agit-copy strong { color: var(--black); }
-.section-light .agit-copy span { color: #666; }
-.section-light .bridge { background: var(--black); color: var(--white); border-left-color: var(--yellow); }
-.section-light .seq-card { background: #F0F0EC; border-color: #D5D5D5; }
-.section-light .seq-card:hover { border-color: var(--black); }
-.section-light .seq-num { color: #D5D5D5; }
-.section-light .seq-body { color: #555; }
-.section-light .seq-plus { background: #E8E8E3; }
-.section-light .seq-plus-item { border-color: #D5D5D5; }
-.section-light .seq-plus-body { color: #666; }
-.section-light .testi-card { background: #F0F0EC; border-color: #D5D5D5; }
-.section-light .testi-card:hover { border-color: var(--black); }
-.section-light .testi-quote { color: #333; }
-.section-light .testi-name { color: var(--black); }
-.section-light .testi-role { color: #777; }
-.section-light hr.rule-inner { border-color: #D5D5D5; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* ── TICKER ── */
-.ticker {
-  background: var(--yellow);
-  color: var(--black);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  letter-spacing: 3px;
-  padding: 9px 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.ticker-track {
-  display: inline-block;
-  animation: tick 30s linear infinite;
-}
-.ticker-track span { margin: 0 48px; }
-@keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-light);
+            background-color: var(--secondary-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-/* ── NAV ── */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 48px;
-  border-bottom: 1px solid var(--border);
-  position: sticky; top:0;
-  background: rgba(0,0,0,0.97);
-  backdrop-filter: blur(12px);
-  z-index: 200;
-}
-.brand {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  letter-spacing: 4px;
-  color: var(--yellow);
-}
-.nav-btn {
-  background: var(--yellow);
-  color: var(--black);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  letter-spacing: 2px;
-  padding: 11px 26px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.08s;
-  border: 2px solid var(--yellow);
-}
-.nav-btn:hover {
-  background: transparent;
-  color: var(--yellow);
-}
+        h1, h2, h3, h4 {
+            font-family: var(--font-headline);
+            font-weight: 700;
+        }
 
-/* ── HERO ── */
-.hero-wrap {
-  background: var(--black);
-  border-bottom: 2px solid var(--yellow);
-}
-.hero {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 70px 48px 60px;
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 64px;
-  align-items: center;
-}
-.hero-badge {
-  display: inline-block;
-  background: var(--red);
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-size: 10px;
-  letter-spacing: 4px;
-  padding: 5px 14px;
-  margin-bottom: 28px;
-  text-transform: uppercase;
-}
-h1 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(52px, 6.5vw, 88px);
-  line-height: 0.93;
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-h1 em { color: var(--yellow); font-style: normal; display: block; }
-h1 .red-txt { color: var(--red); }
+        p {
+            font-size: 1.1rem;
+        }
 
-.proof-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
-}
-.stars { color: var(--yellow); font-size: 16px; letter-spacing: 3px; }
-.proof-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-.hero-body {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #999;
-  margin-bottom: 36px;
-  max-width: 500px;
-}
-.hero-body strong { color: var(--white); }
+        .section-padding {
+            padding: 6rem 0;
+        }
 
-.btn-yellow {
-  display: inline-block;
-  background: var(--yellow);
-  color: var(--black);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-  padding: 20px 44px;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.08s;
-  border: 2px solid var(--yellow);
-  animation: glow 3s ease-in-out infinite;
-}
-@keyframes glow {
-  0%,100%{ box-shadow: 0 0 0 0 rgba(223,255,0,0); }
-  50%{ box-shadow: 0 0 24px 6px rgba(223,255,0,0.15); }
-}
-.btn-yellow:hover {
-  background: transparent;
-  color: var(--yellow);
-  animation: none;
-  box-shadow: 4px 4px 0 var(--yellow);
-}
-.btn-note {
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 2px;
-  margin-top: 12px;
-  text-align: center;
-}
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background-color: var(--accent);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: var(--font-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
 
-/* VIDEO MOCK */
-.video-mock {
-  background: #0d0d0d;
-  border: 2px solid var(--border);
-  aspect-ratio: 16/11;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  position: relative;
-  overflow: hidden;
-}
-.video-mock::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg, transparent, transparent 3px,
-    rgba(223,255,0,0.015) 3px, rgba(223,255,0,0.015) 4px
-  );
-}
-.play-circle {
-  width: 68px; height: 68px;
-  background: var(--yellow);
-  border-radius: 0;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  position: relative; z-index: 2;
-  transition: transform 0.1s;
-}
-.play-circle:hover { transform: scale(1.08); }
-.play-arrow {
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  border-left: 22px solid var(--black);
-  margin-left: 6px;
-}
-.video-label {
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #444;
-  position: relative; z-index: 2;
-}
-.video-border-label {
-  position: absolute;
-  top: 12px; left: 12px;
-  background: var(--red);
-  color: var(--white);
-  font-size: 9px;
-  letter-spacing: 3px;
-  padding: 3px 10px;
-  z-index: 2;
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(201, 168, 76, 0.3);
+            filter: brightness(1.1);
+        }
 
-/* ── SECTION BASE ── */
-.section {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 80px 48px;
-}
-.section-tag {
-  font-size: 10px;
-  letter-spacing: 5px;
-  color: var(--yellow);
-  margin-bottom: 28px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-transform: uppercase;
-}
-.section-tag::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-  max-width: 180px;
-}
-h2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(38px, 4.5vw, 60px);
-  line-height: 0.95;
-  text-transform: uppercase;
-  margin-bottom: 44px;
-}
-h2 em { color: var(--yellow); font-style: normal; }
-h2 .red-h { color: var(--red); }
+        .badge {
+            display: inline-block;
+            font-family: var(--font-accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
 
-hr.rule { border: none; border-top: 1px solid var(--border); margin: 0 48px; }
+        .dark-section {
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+        }
 
-/* ── AGITATOR ── */
-.agit-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-}
-.agit-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 26px 30px;
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  transition: border-color 0.15s;
-}
-.agit-item:hover { border-color: var(--red); }
-.agit-x { color: var(--red); font-family: 'Barlow Condensed', sans-serif; font-size: 24px; flex-shrink:0; line-height:1; }
-.agit-copy strong { display:block; font-size:13px; color:var(--white); margin-bottom:5px; letter-spacing:0.5px; }
-.agit-copy span { font-size:12px; color:#777; line-height:1.7; }
+        .dark-section h2 {
+            color: #fff;
+        }
 
-.bridge {
-  margin-top: 40px;
-  background: var(--card);
-  border-left: 4px solid var(--yellow);
-  padding: 24px 32px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 22px;
-  letter-spacing: 1px;
-}
-.bridge em { color: var(--yellow); font-style: normal; }
+        .gold-border-box {
+            border: 2px solid var(--accent);
+            padding: 2rem;
+            border-radius: 8px;
+        }
 
-/* ── SEQUENCE REVEAL ── */
-.sequence-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-  margin-bottom: 2px;
-}
-.seq-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 36px 28px;
-  position: relative;
-  transition: border-color 0.15s;
-  overflow: hidden;
-}
-.seq-card::before {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--yellow);
-  transform: scaleX(0);
-  transition: transform 0.2s;
-}
-.seq-card:hover { border-color: var(--yellow); }
-.seq-card:hover::before { transform: scaleX(1); }
-.seq-num {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 64px;
-  color: #1a1a1a;
-  line-height: 1;
-  margin-bottom: 16px;
-}
-.seq-title {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  color: var(--yellow);
-}
-.seq-body { font-size: 12px; line-height: 1.8; color: #888; }
+        /* 1. Urgency Bar */
+        .urgency-bar {
+            background-color: var(--accent);
+            color: #000;
+            padding: 0.75rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: var(--font-accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
 
-.seq-plus {
-  background: #0d0d0d;
-  border: 1px solid var(--border);
-  padding: 28px 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  margin-bottom: 2px;
-}
-.seq-plus-item {
-  padding: 20px;
-  border: 1px solid var(--border);
-}
-.seq-plus-title { font-family:'Barlow Condensed',sans-serif; font-size:15px; letter-spacing:1px; margin-bottom:8px; }
-.seq-plus-body { font-size:12px; color:#777; line-height:1.7; }
+        .ticker {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
 
-/* ── DELIVERABLES ── */
-.del-list { display:flex; flex-direction:column; gap:2px; }
-.del-row {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 28px 32px;
-  display: grid;
-  grid-template-columns: 56px 1fr auto;
-  align-items: center;
-  gap: 24px;
-  transition: all 0.12s;
-  position: relative;
-}
-.del-row::before {
-  content:'';
-  position:absolute;
-  left:0;top:0;bottom:0;
-  width:3px;
-  background:var(--yellow);
-  transform:scaleY(0);
-  transition:transform 0.2s;
-}
-.del-row:hover { border-color:var(--yellow); }
-.del-row:hover::before { transform:scaleY(1); }
-.del-row.bonus { border-color: rgba(223,255,0,0.3); }
-.del-num { font-family:'Barlow Condensed',sans-serif; font-size:36px; color:#222; line-height:1; }
-.del-title { font-family:'Barlow Condensed',sans-serif; font-size:18px; letter-spacing:0.5px; margin-bottom:6px; }
-.del-desc { font-size:12px; color:#777; line-height:1.6; }
-.del-val { font-family:'Barlow Condensed',sans-serif; font-size:20px; color:var(--yellow); text-align:right; white-space:nowrap; }
-.del-val small { display:block; font-family:'Inter',sans-serif; font-size:9px; color:#444; letter-spacing:2px; }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
 
-/* ── VALUE TABLE ── */
-.vtable-wrap {
-  border: 2px solid var(--yellow);
-  overflow: hidden;
-  margin-top: 48px;
-}
-.vtable-head {
-  background: var(--yellow);
-  color: var(--black);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
-  letter-spacing: 3px;
-  padding: 14px 28px;
-  display: flex;
-  justify-content: space-between;
-}
-.vtable-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 28px;
-  border-bottom: 1px solid var(--border-light);
-  font-size: 13px;
-}
-.vtable-row:last-of-type { border-bottom: none; }
-.vtable-name { color: #bbb; }
-.vtable-price { color: #555; text-decoration: line-through; font-family:'Barlow Condensed',sans-serif; }
-.vtable-total {
-  background: var(--black);
-  border-top: 2px solid var(--yellow);
-  padding: 24px 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.vtotal-label { font-family:'Barlow Condensed',sans-serif; font-size:14px; letter-spacing:2px; color:#666; }
-.vtotal-price { font-family:'Barlow Condensed',sans-serif; font-size:52px; color:var(--yellow); line-height:1; }
-.vtotal-was { font-family:'Inter',sans-serif; font-size:13px; color:#444; text-decoration:line-through; margin-right:12px; vertical-align:middle; }
+        /* Nav */
+        nav {
+            position: fixed;
+            top: 40px; /* Below urgency bar */
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
 
-/* ── TESTIMONIALS ── */
-.testi-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 2px;
-}
-.testi-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 32px 28px;
-  transition: border-color 0.15s;
-}
-.testi-card:hover { border-color: var(--yellow); }
-.testi-stars { color:var(--yellow); font-size:13px; letter-spacing:4px; margin-bottom:18px; }
-.testi-quote { font-size:13px; line-height:1.8; color:#ccc; margin-bottom:22px; font-style:italic; }
-.testi-name { font-family:'Barlow Condensed',sans-serif; font-size:14px; letter-spacing:1px; color:var(--yellow); }
-.testi-role { font-size:10px; color:#555; letter-spacing:1px; margin-top:4px; }
+        nav.scrolled {
+            top: 0;
+            background-color: var(--primary-bg);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
 
-/* ── GUARANTEE ── */
-.guarantee-box {
-  background: var(--card);
-  border: 2px solid var(--border);
-  padding: 56px;
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 48px;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.guarantee-box::after {
-  content:'GUARANTEED';
-  position:absolute;
-  right:-60px; top:50%;
-  transform:translateY(-50%) rotate(90deg);
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:90px;
-  color:rgba(223,255,0,0.025);
-  white-space:nowrap;
-  letter-spacing:8px;
-}
-.g-stamp {
-  width:130px; height:130px;
-  border: 4px solid var(--yellow);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(-12deg);
-  flex-shrink: 0;
-  position: relative;
-  flex-shrink: 0;
-}
-.g-stamp::before {
-  content:'';
-  position:absolute;
-  inset:7px;
-  border:1px solid rgba(223,255,0,0.3);
-  border-radius:50%;
-}
-.g-days { font-family:'Barlow Condensed',sans-serif; font-size:42px; color:var(--yellow); line-height:1; }
-.g-text { font-size:9px; letter-spacing:2px; color:var(--yellow); text-align:center; line-height:1.5; }
-.g-title { font-family:'Barlow Condensed',sans-serif; font-size:26px; line-height:1.1; margin-bottom:18px; color: var(--white); }
-.g-body { font-size:13px; line-height:1.9; color:#aaa; }
-.g-body strong { color:var(--white); }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* ── URGENCY BAR ── */
-.urgency {
-  background: var(--red);
-  padding: 16px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 15px;
-  letter-spacing: 2px;
-  text-align: center;
-}
-.u-dot {
-  width: 9px; height: 9px;
-  background: white;
-  border-radius: 50%;
-  animation: blink 1s ease-in-out infinite;
-  flex-shrink: 0;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.1} }
+        .logo {
+            font-family: var(--font-headline);
+            font-weight: 900;
+            color: var(--accent);
+            font-size: 1.5rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
 
-/* ── CHECKOUT ── */
-.checkout-grid {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 64px;
-  align-items: start;
-}
-.form-head { font-family:'Barlow Condensed',sans-serif; font-size:26px; margin-bottom:8px; }
-.form-sub { font-size:12px; color:#666; margin-bottom:32px; line-height:1.7; }
+        .nav-btn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+        }
 
-.field { margin-bottom:20px; }
-.field label {
-  display:block;
-  font-size:10px;
-  letter-spacing:4px;
-  color:var(--yellow);
-  margin-bottom:8px;
-  text-transform:uppercase;
-}
-.field input, .field textarea {
-  width:100%;
-  background:#0d0d0d;
-  border:1px solid var(--border);
-  color:var(--white);
-  font-family:'Inter',sans-serif;
-  font-size:13px;
-  padding:14px 16px;
-  outline:none;
-  transition:border-color 0.15s;
-  resize:none;
-}
-.field input:focus, .field textarea:focus { border-color:var(--yellow); }
-.field input::placeholder, .field textarea::placeholder { color:#333; }
-.form-privacy { font-size:10px; color:#444; line-height:1.9; letter-spacing:0.5px; margin-top:16px; }
+        /* 2. Hero */
+        .hero {
+            background: radial-gradient(circle at center, #152238 0%, #0B1426 100%);
+            padding-top: 10rem;
+            padding-bottom: 8rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
-/* PAYMENT PANEL */
-.pay-panel { position:sticky; top:90px; }
-.price-card {
-  background: var(--card);
-  border: 2px solid var(--yellow);
-  padding: 36px;
-  margin-bottom: 16px;
-}
-.price-was { font-size:12px; color:#555; letter-spacing:2px; text-decoration:line-through; margin-bottom:4px; }
-.price-big { font-family:'Barlow Condensed',sans-serif; font-size:76px; color:var(--yellow); line-height:1; }
-.price-note { font-size:10px; color:#555; letter-spacing:2px; margin-top:8px; }
-.includes { margin-top:24px; padding-top:24px; border-top:1px solid var(--border); }
-.includes-title { font-size:10px; letter-spacing:3px; color:#444; margin-bottom:16px; text-transform:uppercase; }
-.inc-item { display:flex; gap:10px; align-items:center; font-size:12px; color:#aaa; margin-bottom:10px; }
-.inc-check { color:var(--yellow); font-size:13px; }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
 
-.topmate-btn {
-  display:block;
-  width:100%;
-  background:var(--yellow);
-  color:var(--black);
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:22px;
-  letter-spacing:2px;
-  padding:22px;
-  text-align:center;
-  text-decoration:none;
-  border:2px solid var(--yellow);
-  cursor:pointer;
-  transition:all 0.08s;
-  animation:glow 3s ease-in-out infinite;
-}
-.topmate-btn:hover {
-  background:transparent;
-  color:var(--yellow);
-  animation:none;
-  box-shadow:4px 4px 0 var(--yellow);
-}
-.pay-secure { font-size:10px; color:#444; text-align:center; margin-top:10px; letter-spacing:2px; }
-.mini-guarantee {
-  margin-top:20px;
-  background:#0d0d0d;
-  border:1px solid var(--border);
-  padding:20px;
-}
-.mini-g-title { font-size:10px; letter-spacing:3px; color:var(--yellow); margin-bottom:8px; }
-.mini-g-body { font-size:11px; color:#777; line-height:1.8; }
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
 
-/* ── FAQ ── */
-.faq-list { display:flex; flex-direction:column; gap:2px; }
-.faq-item {
-  background:var(--card);
-  border:1px solid var(--border);
-  overflow:hidden;
-}
-.faq-q {
-  padding:22px 28px;
-  font-family:'Barlow Condensed',sans-serif;
-  font-size:16px;
-  letter-spacing:0.5px;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  transition:color 0.15s;
-  color: var(--white);
-}
-.faq-q:hover { color:var(--yellow); }
-.faq-icon { color:var(--yellow); font-size:24px; transition:transform 0.3s; flex-shrink:0; }
-.faq-a {
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.4s ease, padding 0.3s;
-  font-size:13px;
-  line-height:1.9;
-  color:#888;
-  padding:0 28px;
-}
-.faq-item.open .faq-a { max-height:300px; padding:0 28px 24px; }
-.faq-item.open .faq-icon { transform:rotate(45deg); }
+        .hero .subheadline {
+            font-size: 1.2rem;
+            color: rgba(245, 245, 240, 0.7);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
 
-/* ── FOOTER ── */
-footer {
-  border-top:1px solid #333;
-  padding:40px 48px;
-  background: var(--black);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  max-width:1140px;
-  margin:0 auto;
-}
-.footer-brand { font-family:'Barlow Condensed',sans-serif; font-size:18px; color:var(--yellow); letter-spacing:3px; }
-.footer-copy { font-size:10px; color:#333; margin-top:6px; letter-spacing:1px; }
-.footer-right { text-align:right; font-size:10px; line-height:2.2; color:#444; letter-spacing:1px; }
-.footer-email { color:var(--yellow); }
+        .stars-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
 
-/* ── FADE IN ── */
-.fi { opacity:0; transform:translateY(22px); transition:opacity 0.6s, transform 0.6s; }
-.fi.show { opacity:1; transform:translateY(0); }
+        .stars-row span {
+            color: rgba(245, 245, 240, 0.6);
+            font-size: 0.9rem;
+        }
 
-/* ── MOBILE ── */
-@media(max-width:768px){
-  nav { padding:14px 20px; }
-  .hero { grid-template-columns:1fr; padding:40px 20px; gap:40px; }
-  .video-mock { display:none; }
-  .section { padding:60px 20px; }
-  hr.rule { margin:0 20px; }
-  .agit-grid { grid-template-columns:1fr; }
-  .sequence-grid { grid-template-columns:1fr; }
-  .seq-plus { grid-template-columns:1fr; }
-  .testi-grid { grid-template-columns:1fr; }
-  .checkout-grid { grid-template-columns:1fr; }
-  .pay-panel { position:static; }
-  .guarantee-box { grid-template-columns:1fr; padding:32px 20px; text-align:center; }
-  .g-stamp { margin:0 auto; }
-  .del-row { grid-template-columns:40px 1fr; }
-  .del-val { display:none; }
-  footer { flex-direction:column; gap:20px; text-align:center; }
-  .footer-right { text-align:center; }
-  .urgency { font-size:12px; padding:14px 20px; }
-}
-</style>
+        .hero .small-text {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: rgba(245, 245, 240, 0.5);
+        }
+
+        .video-placeholder {
+            position: relative;
+            background: var(--card-navy);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            aspect-ratio: 16/9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* REPLACE THIS WITH YOUR VIDEO URL LATER (YouTube/Loom iframe) */
+        .video-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0.5;
+        }
+
+        .play-btn {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .play-btn::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid #000;
+            margin-left: 5px;
+        }
+
+        .video-placeholder:hover .play-btn {
+            transform: scale(1.1);
+        }
+
+        .video-label {
+            margin-top: 1rem;
+            font-family: var(--font-accent);
+            font-size: 0.9rem;
+            text-align: center;
+            color: rgba(245, 245, 240, 0.7);
+        }
+
+        /* 3. Credibility Bar */
+        .cred-bar {
+            background: #fff;
+            padding: 3rem 0;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .cred-bar p {
+            font-family: var(--font-accent);
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 4. Personal Story */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .story-img-container {
+            position: relative;
+        }
+
+        .story-img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid var(--accent);
+        }
+
+        .story-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .story-content p {
+            margin-bottom: 0.5rem; /* Punchy style */
+            font-size: 1.1rem;
+        }
+
+        /* 5. The Problem */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .problem-card {
+            background: var(--card-navy);
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .problem-card .icon {
+            color: var(--highlight-red);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .problem-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            color: rgba(245, 245, 240, 0.6);
+        }
+
+        .conclusion-box {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* 6. The Solution */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .solution-card {
+            padding: 3rem;
+            background: #f9f9f9;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .solution-card .num {
+            font-family: var(--font-accent);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent);
+            opacity: 0.3;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .solution-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .extra-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .extra-card {
+            background: var(--primary-bg);
+            color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .extra-card .plus {
+            font-size: 2rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* 7. What Is Inside */
+        .value-rows {
+            margin: 4rem 0;
+        }
+
+        .value-row {
+            display: grid;
+            grid-template-columns: 80px 1fr 150px;
+            align-items: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .value-row .row-num {
+            font-size: 2rem;
+            font-family: var(--font-accent);
+            color: rgba(201, 168, 76, 0.3);
+            font-weight: 700;
+        }
+
+        .value-row .row-content h3 {
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .value-row .row-content p {
+            font-size: 0.9rem;
+            color: rgba(245, 245, 240, 0.5);
+        }
+
+        .value-row .row-price {
+            text-align: right;
+            color: var(--accent);
+            text-decoration: line-through;
+            font-family: var(--font-accent);
+            font-weight: 700;
+        }
+
+        .value-stack-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: rgba(255,255,255,0.05);
+            margin-top: 2rem;
+            padding: 3rem;
+        }
+
+        .value-stack-box ul {
+            list-style: none;
+        }
+
+        .value-stack-box li {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .value-stack-box li::before {
+            content: '✓';
+            color: var(--accent);
+        }
+
+        .stack-price {
+            text-align: right;
+        }
+
+        .stack-price .total {
+            text-decoration: line-through;
+            opacity: 0.5;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stack-price .final {
+            font-size: 4rem;
+            color: var(--accent);
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        /* 8. Free Audit Call */
+        .audit-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .urgency-text {
+            color: var(--highlight-red);
+            font-weight: 700;
+            margin: 1.5rem 0;
+            display: block;
+        }
+
+        .audit-visual {
+            background: var(--primary-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            color: #fff;
+            text-align: center;
+            border: 2px solid var(--accent);
+        }
+
+        .audit-visual .checkmark-circle {
+            width: 80px;
+            height: 80px;
+            border: 4px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+
+        .audit-visual ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .audit-visual li {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 9. Guarantee */
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .guarantee-stamp-container {
+            text-align: center;
+        }
+
+        /* REPLACE THIS WITH YOUR STAMP IMAGE */
+        .guarantee-stamp {
+            width: 300px;
+            transform: rotate(-10deg);
+        }
+
+        /* 10. Checkout Form */
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        .checkout-form {
+            background: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: var(--font-accent);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        .privacy-note {
+            font-size: 0.8rem;
+            color: #888;
+            margin: 1.5rem 0;
+        }
+
+        .price-summary-card {
+            background: var(--primary-bg);
+            color: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 2px solid var(--accent);
+            position: sticky;
+            top: 100px;
+        }
+
+        .price-summary-card h4 {
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-summary-card .price {
+            font-size: 3.5rem;
+            color: var(--accent);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .price-summary-card ul {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .price-summary-card li {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .price-summary-card .mini-guarantee {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* 11. FAQ */
+        .faq-grid {
+            max-width: 800px;
+            margin: 4rem auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-family: var(--font-headline);
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: rgba(245, 245, 240, 0.7);
+            font-size: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* 12. Footer */
+        footer {
+            background: #060c18;
+            padding: 4rem 0;
+            color: #fff;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-left h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer-right {
+            text-align: right;
+            max-width: 400px;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .hero-grid, .story-grid, .audit-grid, .guarantee-grid, .checkout-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .extra-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .value-row {
+                grid-template-columns: 50px 1fr 100px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-right {
+                text-align: left;
+            }
+
+            .footer-links a {
+                margin-left: 0;
+                margin-right: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .price-summary-card {
+                position: static;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-track">
-    <span>⚡ ONLY 8 FREE AUDIT CALL SPOTS LEFT THIS MONTH</span>
-    <span>★★★★★ USED BY 200+ COACHES &amp; CONSULTANTS</span>
-    <span>🔒 30-DAY PROOF-BASED MONEY BACK GUARANTEE</span>
-    <span>🔥 ₹38,500 VALUE — TODAY ONLY ₹2,250</span>
-    <span>⚡ ONLY 8 FREE AUDIT CALL SPOTS LEFT THIS MONTH</span>
-    <span>★★★★★ USED BY 200+ COACHES &amp; CONSULTANTS</span>
-    <span>🔒 30-DAY PROOF-BASED MONEY BACK GUARANTEE</span>
-    <span>🔥 ₹38,500 VALUE — TODAY ONLY ₹2,250</span>
-  </div>
-</div>
-
-<!-- NAV -->
-<nav>
-  <div class="brand">SALES SEQUENCE</div>
-  <a href="https://topmate.io/sudipta_banerjee11/2059443" class="nav-btn" target="_blank" rel="noopener noreferrer">GET IT FOR ₹2,250 →</a>
-</nav>
-
-<!-- HERO -->
-<div class="hero-wrap">
-  <div class="hero">
-    <div>
-      <div class="hero-badge">⚠ CLASSIFIED OUTREACH SYSTEM</div>
-      <h1>
-        THE 3-TOUCH
-        <em>LINKEDIN SALES</em>
-        SEQUENCE THAT
-        <span class="red-txt">BOOKS CALLS.</span>
-      </h1>
-      <div class="proof-row">
-        <div class="stars">★★★★★</div>
-        <div class="proof-label">USED BY 200+ COACHES, CONSULTANTS &amp; AGENCY OWNERS ACROSS 14 COUNTRIES</div>
-      </div>
-      <p class="hero-body">
-        Not a script. Not a template. A proven <strong>3-touch conversation system</strong> that moves a cold LinkedIn connection from stranger to booked discovery call — without pitching, without pressure, without sounding desperate.
-      </p>
-      <div>
-        <a href="#checkout" class="btn-yellow">STEAL THE SEQUENCE — ₹2,250 →</a>
-        <div class="btn-note">⚡ INSTANT DELIVERY · 30-DAY GUARANTEE · 8 AUDIT SPOTS LEFT</div>
-      </div>
-    </div>
-    <div class="video-mock">
-      <div class="video-border-label">● REC</div>
-      <div class="play-circle"><div class="play-arrow"></div></div>
-      <div class="video-label">// WATCH: HOW IT WORKS (5 MIN)</div>
-    </div>
-  </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
-
-<!-- PROBLEM -->
-<div class="section fi section-light" style="background:var(--white);color:var(--black);">
-  <div class="section-tag">// THE PROBLEM</div>
-  <h2>WHY YOUR LINKEDIN<br/><span class="red-h">OUTREACH IS FAILING.</span></h2>
-  <div class="agit-grid">
-    <div class="agit-item">
-      <div class="agit-x">✕</div>
-      <div class="agit-copy">
-        <strong>Connection requests that vanish into silence</strong>
-        <span>You send. They accept. Nothing happens. You have no idea what to say next.</span>
-      </div>
-    </div>
-    <div class="agit-item">
-      <div class="agit-x">✕</div>
-      <div class="agit-copy">
-        <strong>Opening messages that get read and ignored</strong>
-        <span>They see your pitch in line 1 and their finger is already on delete.</span>
-      </div>
-    </div>
-    <div class="agit-item">
-      <div class="agit-x">✕</div>
-      <div class="agit-copy">
-        <strong>Follow-ups that sound desperate</strong>
-        <span>"Just checking in..." — the three words that kill every sale before it starts.</span>
-      </div>
-    </div>
-    <div class="agit-item">
-      <div class="agit-x">✕</div>
-      <div class="agit-copy">
-        <strong>"Send me more info" — and it dies there</strong>
-        <span>No framework for objections means every warm lead goes cold permanently.</span>
-      </div>
-    </div>
-    <div class="agit-item">
-      <div class="agit-x">✕</div>
-      <div class="agit-copy">
-        <strong>Hours of outreach. Zero booked calls.</strong>
-        <span>Time you could spend on delivery, strategy or anything else — completely wasted.</span>
-      </div>
-    </div>
-    <div class="agit-item">
-      <div class="agit-x">✕</div>
-      <div class="agit-copy">
-        <strong>Competitors with weaker offers landing your clients</strong>
-        <span>It is not your offer. It is not your profile. It is the sequence.</span>
-      </div>
-    </div>
-  </div>
-  <div class="bridge">
-    It is not your offer. It is not your niche.<br/>
-    It is <em>the conversation system you are missing.</em>
-  </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
-
-<!-- SOLUTION -->
-<div class="section fi section-dark">
-  <div class="section-tag">// THE SOLUTION</div>
-  <h2>THE 3-TOUCH<br/><em>CONVERSATION SYSTEM.</em></h2>
-  <div class="sequence-grid">
-    <div class="seq-card">
-      <div class="seq-num">01</div>
-      <div class="seq-title">THE CONNECTION MESSAGE</div>
-      <div class="seq-body">Not a pitch. Not a template. A short, personalised opener that gets accepted, remembered, and sets the tone for a real conversation — not a sales call.</div>
-    </div>
-    <div class="seq-card">
-      <div class="seq-num">02</div>
-      <div class="seq-title">THE CONVERSATION STARTER</div>
-      <div class="seq-body">The message that sparks genuine curiosity about what you do — without selling anything. They ask questions. You answer. The relationship builds naturally.</div>
-    </div>
-    <div class="seq-card">
-      <div class="seq-num">03</div>
-      <div class="seq-title">THE SOFT INVITATION</div>
-      <div class="seq-body">The natural bridge from conversation to booked call. No pressure. No hard close. Just a simple next step that feels obvious to them — not forced by you.</div>
-    </div>
-  </div>
-  <div class="seq-plus">
-    <div class="seq-plus-item">
-      <div class="seq-plus-title">+ THE RE-ENGAGEMENT MESSAGE</div>
-      <div class="seq-plus-body">For when they go quiet. Gets 40% of cold leads back into the conversation without sounding desperate or needy.</div>
-    </div>
-    <div class="seq-plus-item">
-      <div class="seq-plus-title">+ OBJECTION RESPONSE SHEET</div>
-      <div class="seq-plus-body">Word-for-word replies to "not interested", "send me more info" and "not the right time". Never lose a warm lead again.</div>
-    </div>
-  </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
-
-<!-- DELIVERABLES -->
-<div class="section fi section-light" style="background:var(--white);color:var(--black);">
-  <div class="section-tag">// WHAT'S INSIDE</div>
-  <h2>EVERYTHING YOU GET<br/><em>FOR ₹2,250.</em></h2>
-  <div class="del-list">
-    <div class="del-row">
-      <div class="del-num">01</div>
-      <div>
-        <div class="del-title">THE 3-TOUCH LINKEDIN SALES SEQUENCE</div>
-        <div class="del-desc">Complete word-for-word conversation system. All 3 touches written, explained and ready to personalise. From connection request to booked call.</div>
-      </div>
-      <div class="del-val">₹8,000<small>VALUE</small></div>
-    </div>
-    <div class="del-row">
-      <div class="del-num">02</div>
-      <div>
-        <div class="del-title">PROFILE PRIMER CHECKLIST</div>
-        <div class="del-desc">5 things your LinkedIn profile must say before any outreach works. Without this, even the best sequence falls flat before message one.</div>
-      </div>
-      <div class="del-val">₹4,000<small>VALUE</small></div>
-    </div>
-    <div class="del-row">
-      <div class="del-num">03</div>
-      <div>
-        <div class="del-title">THE RE-ENGAGEMENT MESSAGE</div>
-        <div class="del-desc">The one non-desperate message for when they go quiet. Brings back 40% of cold conversations without sounding like you need the sale.</div>
-      </div>
-      <div class="del-val">₹4,000<small>VALUE</small></div>
-    </div>
-    <div class="del-row">
-      <div class="del-num">04</div>
-      <div>
-        <div class="del-title">OBJECTION RESPONSE SHEET</div>
-        <div class="del-desc">Word-for-word replies to every common objection. Keep every conversation alive instead of watching warm leads disappear permanently.</div>
-      </div>
-      <div class="del-val">₹2,500<small>VALUE</small></div>
-    </div>
-    <div class="del-row">
-      <div class="del-num">05</div>
-      <div>
-        <div class="del-title">5-MINUTE LOOM WALKTHROUGH</div>
-        <div class="del-desc">Watch over the shoulder — who to target, what to personalise, when to send each touch. Send your first message within the hour of purchasing.</div>
-      </div>
-      <div class="del-val">₹4,000<small>VALUE</small></div>
-    </div>
-    <div class="del-row bonus">
-      <div class="del-num" style="color:var(--yellow)">★</div>
-      <div>
-        <div class="del-title del-bonus-title" style="color:var(--yellow)">FREE 30-MIN LINKEDIN AUDIT CALL</div>
-        <div class="del-desc">Personal review of your profile, targeting and outreach. Specific fixes for your niche. <strong style="color:var(--red)">Only 8 spots left this month.</strong></div>
-      </div>
-      <div class="del-val" style="color:var(--white)">₹16,000<small>VALUE</small></div>
-    </div>
-  </div>
-
-  <div class="vtable-wrap">
-    <div class="vtable-head"><span>WHAT YOU'RE GETTING</span><span>RETAIL VALUE</span></div>
-    <div class="vtable-row"><span class="vtable-name">3-Touch LinkedIn Sales Sequence</span><span class="vtable-price">₹8,000</span></div>
-    <div class="vtable-row"><span class="vtable-name">Profile Primer Checklist</span><span class="vtable-price">₹4,000</span></div>
-    <div class="vtable-row"><span class="vtable-name">Re-Engagement Message</span><span class="vtable-price">₹4,000</span></div>
-    <div class="vtable-row"><span class="vtable-name">Objection Response Sheet</span><span class="vtable-price">₹2,500</span></div>
-    <div class="vtable-row"><span class="vtable-name">5-Minute Loom Walkthrough</span><span class="vtable-price">₹4,000</span></div>
-    <div class="vtable-row"><span class="vtable-name" style="color:var(--yellow)">★ Free 30-Min Audit Call</span><span class="vtable-price">₹16,000</span></div>
-    <div class="vtable-total">
-      <div>
-        <div class="vtotal-label">TODAY'S PRICE</div>
-        <div style="font-size:11px;color:#333;letter-spacing:2px;margin-top:4px;">TOTAL VALUE: ₹38,500</div>
-      </div>
-      <div class="vtotal-price"><span class="vtotal-was">₹38,500</span>₹2,250</div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:28px;">
-    <a href="#checkout" class="btn-yellow" style="display:inline-block;">GET EVERYTHING FOR ₹2,250 →</a>
-  </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
-
-<!-- TESTIMONIALS -->
-<div class="section fi section-dark">
-  <div class="section-tag">// SOCIAL PROOF</div>
-  <h2>WHAT HAPPENED WHEN<br/><em>THEY USED IT.</em></h2>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-quote">"Sent the sequence to 15 people Monday morning. By Wednesday I had 4 replies and 2 discovery calls booked. I've been doing LinkedIn outreach for 2 years and never seen results like this."</div>
-      <div class="testi-name">JAMES R.</div>
-      <div class="testi-role">BUSINESS COACH · LONDON</div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-quote">"I was sceptical at ₹2,250. Not anymore. Booked a ₹3.5L client from the third message I sent. The objection response sheet alone is worth 100x the price."</div>
-      <div class="testi-name">SARAH M.</div>
-      <div class="testi-role">MARKETING CONSULTANT · DUBAI</div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-quote">"Reply rate went from 3% to 22%. The re-engagement message is genius — I resurrected conversations I had completely written off months ago."</div>
-      <div class="testi-name">DANIEL K.</div>
-      <div class="testi-role">AGENCY OWNER · SINGAPORE</div>
-    </div>
-  </div>
-</div>
-
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
-
-<!-- GUARANTEE -->
-<div class="section fi section-light" style="background:var(--white);color:var(--black);">
-  <div class="section-tag">// THE GUARANTEE</div>
-  <div class="guarantee-box">
-    <div class="g-stamp">
-      <div class="g-days">30</div>
-      <div class="g-text">DAY<br/>GUARANTEE</div>
-    </div>
-    <div>
-      <div class="g-title">USE IT. IF IT FAILS, WE REWRITE IT FREE.<br/><span style="color:var(--yellow)">STILL NOTHING? FULL REFUND.</span></div>
-      <p class="g-body">
-        Use the sequence. Send it to <strong>20 people within 30 days</strong>. Get zero replies? Email us your sent message screenshots and we'll <strong>personally rewrite the sequence for your specific niche — completely free</strong>.<br/><br/>
-        If that custom rewrite still doesn't convert? <strong>Every rupee back. No drama. No hoops. No questions.</strong><br/><br/>
-        We make this guarantee because we know the sequence works. The only people who don't get results are the ones who don't send it.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- URGENCY -->
-<div class="urgency">
-  <div class="u-dot"></div>
-  <span>⚠ ONLY 8 FREE AUDIT CALL SPOTS LEFT THIS MONTH — PRICE INCREASES TO ₹3,500 ON FRIDAY</span>
-  <div class="u-dot"></div>
-</div>
-
-<!-- CHECKOUT -->
-<div class="section fi section-dark" id="checkout" style="background:var(--black);color:var(--white);">
-  <div class="section-tag">// SECURE CHECKOUT</div>
-  <h2>GET THE SEQUENCE.<br/><em>START BOOKING CALLS.</em></h2>
-  <div class="checkout-grid">
-
-    <!-- FORM -->
-    <div>
-      <div class="form-head">STEP 1 — YOUR DETAILS</div>
-      <div class="form-sub">Fill this in so we can personalise your audit call and follow up. Takes 30 seconds.</div>
-      <div class="field">
-        <label>// YOUR FULL NAME</label>
-        <input type="text" id="inp-name" placeholder="First name Last name"/>
-      </div>
-      <div class="field">
-        <label>// YOUR EMAIL ADDRESS</label>
-        <input type="email" id="inp-email" placeholder="you@email.com"/>
-      </div>
-      <div class="field">
-        <label>// YOUR LINKEDIN PROFILE URL</label>
-        <input type="url" id="inp-linkedin" placeholder="linkedin.com/in/yourprofile"/>
-      </div>
-      <div class="field">
-        <label>// YOUR BIGGEST LINKEDIN CHALLENGE (OPTIONAL)</label>
-        <input type="text" placeholder="e.g. No replies, don't know who to target..."/>
-      </div>
-      <div class="form-privacy">
-        🔒 Your details are private. We will never share, sell or spam you.<br/>
-        You will receive access to the full sequence immediately after payment.<br/>
-        Questions? Email us: <span style="color:var(--yellow)">sudiptab.digit@gmail.com</span>
-      </div>
-      <button id="pay-btn" class="topmate-btn" style="margin-top:28px;width:100%;border:none;cursor:pointer;">
-        STEP 2 — PAY ₹2,250 &amp; GET INSTANT ACCESS →
-      </button>
-      <div style="font-size:10px;color:#444;text-align:center;margin-top:10px;letter-spacing:2px;">🔒 SECURE CHECKOUT VIA TOPMATE</div>
-    </div>
-
-    <!-- PAYMENT PANEL -->
-    <div class="pay-panel">
-      <div class="price-card">
-        <div class="price-was">RETAIL VALUE: ₹38,500</div>
-        <div class="price-big">₹2,250</div>
-        <div class="price-note">// ONE-TIME PAYMENT · INSTANT ACCESS · NO SUBSCRIPTION</div>
-        <div class="includes">
-          <div class="includes-title">// WHAT'S INCLUDED</div>
-          <div class="inc-item"><span class="inc-check">✓</span> 3-Touch LinkedIn Sales Sequence</div>
-          <div class="inc-item"><span class="inc-check">✓</span> Profile Primer Checklist</div>
-          <div class="inc-item"><span class="inc-check">✓</span> Re-Engagement Message</div>
-          <div class="inc-item"><span class="inc-check">✓</span> Objection Response Sheet</div>
-          <div class="inc-item"><span class="inc-check">✓</span> 5-Min Loom Walkthrough</div>
-          <div class="inc-item" style="color:var(--yellow)"><span class="inc-check">★</span> FREE 30-Min Audit Call</div>
+    <!-- 1. Urgency Bar -->
+    <div class="urgency-bar">
+        <div class="ticker">
+            ⚡ Only 8 Free Audit Call Spots Left This Month · $9 One-Time Payment · 30-Day Results Guarantee · Instant Access · ⚡ Only 8 Free Audit Call Spots Left This Month · $9 One-Time Payment · 30-Day Results Guarantee · Instant Access
         </div>
-      </div>
-
-      <button id="pay-btn-side" class="topmate-btn" style="border:none;cursor:pointer;width:100%;">
-        GET INSTANT ACCESS — ₹2,250 →
-      </button>
-      <div class="pay-secure">🔒 SECURE CHECKOUT VIA TOPMATE · INSTANT DELIVERY</div>
-
-      <div class="mini-guarantee">
-        <div class="mini-g-title">// 30-DAY PROOF-BASED GUARANTEE</div>
-        <div class="mini-g-body">Send to 20 people. Zero replies? We rewrite it free for your niche. Still nothing? Full refund. No drama.<br/><br/>Questions: <span style="color:var(--yellow)">sudiptab.digit@gmail.com</span></div>
-      </div>
     </div>
 
-  </div>
-</div>
+    <!-- Sticky Nav -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">SUDIPTA BANERJEE</a>
+            <a href="#checkout" class="btn nav-btn">GET $9 ACCESS →</a>
+        </div>
+    </nav>
 
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
+    <!-- 2. Hero Section -->
+    <section class="hero dark-section">
+        <div class="container hero-grid">
+            <div data-aos="fade-up">
+                <span class="badge">TRIED & TESTED · USED PERSONALLY BY THE CREATOR</span>
+                <h1>The Exact LinkedIn Outreach Sequence I Use To Book 3-5 Discovery Calls Every Single Week.</h1>
+                <p class="subheadline">
+                    Not theory. Not a template someone sold me. The real 3-touch DM sequence I built after 13 years in B2B sales and thousands of LinkedIn conversations. Copy it. Personalise one line for your industry. Start booking calls.
+                </p>
+                <div class="stars-row">
+                    ★★★★★ <span>Built by a LinkedIn BD professional with 13 years experience</span>
+                </div>
+                <a href="#checkout" class="btn">GET THE SEQUENCE FOR $9 →</a>
+                <span class="small-text">⚡ Instant delivery · 30-day guarantee</span>
+            </div>
+            <div data-aos="fade-up" style="transition-delay: 0.2s;">
+                <div class="video-placeholder" onclick="handleVideoClick()">
+                    <!-- REPLACE THIS WITH YOUR VIDEO THUMBNAIL URL -->
+                    <img src="video-thumb.png" alt="Video Thumbnail" id="hero-video-thumb">
+                    <div class="play-btn"></div>
+                </div>
+                <p class="video-label">Watch: How The Sequence Works</p>
+            </div>
+        </div>
+    </section>
 
-<!-- FAQ -->
-<div class="section fi section-light" style="background:var(--white);color:var(--black);">
-  <div class="section-tag">// FAQ</div>
-  <h2>QUESTIONS.<br/><em>ANSWERED.</em></h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q"><span>How fast do I get access after paying?</span><span class="faq-icon">+</span></div>
-      <div class="faq-a">Instantly. The moment your payment clears via Topmate you get immediate access to the full sequence and all bonuses. No waiting, no manual delivery from our side.</div>
+    <!-- 3. Credibility Bar -->
+    <div class="cred-bar">
+        <div class="container">
+            <p>As used by coaches, consultants, agency owners and freelancers across 14 countries</p>
+            <div style="color: var(--accent); font-size: 1.2rem;">★★★★★</div>
+        </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q"><span>Is this just copy-paste templates?</span><span class="faq-icon">+</span></div>
-      <div class="faq-a">No. It is a 3-touch conversation system with a specific purpose for each message. You personalise one line per message — everything else is structured, sequenced and ready. The difference between a template and a system is the thinking behind each step.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><span>I'm not a coach — will this work for me?</span><span class="faq-icon">+</span></div>
-      <div class="faq-a">If your ideal clients are on LinkedIn and you sell a service worth having a conversation about — yes. Agency owners, consultants, freelancers, SaaS founders and B2B sales professionals all use this sequence successfully.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><span>Do I need LinkedIn Premium or Sales Navigator?</span><span class="faq-icon">+</span></div>
-      <div class="faq-a">No. The sequence works on a completely free LinkedIn account. Sales Navigator can amplify volume but it is absolutely not required to start getting replies and booking calls.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><span>How does the 30-day guarantee work exactly?</span><span class="faq-icon">+</span></div>
-      <div class="faq-a">Use the sequence. Send it to at least 20 people within 30 days. If you get zero replies, email us at sudiptab.digit@gmail.com with screenshots of your sent messages. We personally rewrite the sequence for your specific niche — free. If that custom version still doesn't convert — full refund. No hoops, no drama.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><span>What is the free audit call and how do I book it?</span><span class="faq-icon">+</span></div>
-      <div class="faq-a">After purchase you will see a booking link inside your Topmate access page. Book a 30-minute call where we personally review your LinkedIn profile, your targeting and your outreach — and give you specific fixes for your niche. Only 8 spots available this month — book immediately after purchasing.</div>
-    </div>
-  </div>
-</div>
 
-<hr style="border:none;border-top:1px solid #222;margin:0;"/>
+    <!-- 4. Personal Story -->
+    <section class="section-padding" id="story">
+        <div class="container story-grid">
+            <div data-aos="fade-right">
+                <div class="story-img-container">
+                    <!-- REPLACE THIS WITH YOUR PHOTO -->
+                    <img src="headshot.png" alt="Sudipta Banerjee" class="story-img">
+                </div>
+            </div>
+            <div class="story-content" data-aos="fade-left">
+                <span class="badge">WHY I BUILT THIS</span>
+                <h2>13 Years. Thousands of DMs. One Sequence That Changed Everything.</h2>
+                <div style="margin-top: 2rem;">
+                    <p>I spent 13 years in B2B sales.</p>
+                    <p>Most of that time was on LinkedIn.</p>
+                    <p>I tried every outreach method that existed.</p>
+                    <p>Long messages. Short messages.</p>
+                    <p>Voice notes. Connection requests with essays attached.</p>
+                    <p>Most of it was ignored.</p>
+                    <p>A tiny fraction actually booked calls.</p>
+                    <p>So I studied those.</p>
+                    <p>After thousands of conversations — I found it.</p>
+                    <p>A 3-touch sequence.</p>
+                    <p>Not complicated. Not clever.</p>
+                    <p>Just the right message, at the right moment, in the right order.</p>
+                    <p>I use it every week.</p>
+                    <p>3 to 5 discovery calls. Consistently.</p>
+                    <p>I packaged it into a system anyone can use.</p>
+                    <p>Personalise one line for your industry.</p>
+                    <p>Send it. That's it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-brand">SUDIPTA BANERJEE</div>
-    <div class="footer-copy">© 2026 · ALL RIGHTS RESERVED</div>
-  </div>
-  <div class="footer-right">
-    <div>SUPPORT: <span class="footer-email">sudiptab.digit@gmail.com</span></div>
-    <div>Results may vary. Testimonials reflect real customer experiences.</div>
-    <div>PRIVACY POLICY · TERMS OF SERVICE</div>
-  </div>
-</footer>
+    <!-- 5. The Problem -->
+    <section class="dark-section section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-up">
+                <span class="badge">WHY YOUR OUTREACH IS FAILING</span>
+                <h2 style="font-size: 3rem;">Your LinkedIn DMs Are Being Ignored.<br>Here's The Honest Reason Why.</h2>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card" data-aos="fade-up">
+                    <span class="icon">✕</span>
+                    <h3>You open with your pitch</h3>
+                    <p>They delete it before finishing line one. Nobody wants to be sold to in the first interaction.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" style="transition-delay: 0.1s;">
+                    <span class="icon">✕</span>
+                    <h3>Your request sounds generic</h3>
+                    <p>It gets accepted then forgotten. You're just another notification in their crowded inbox.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" style="transition-delay: 0.2s;">
+                    <span class="icon">✕</span>
+                    <h3>Your follow-ups sound desperate</h3>
+                    <p>"Just checking in" is killing your sales and making you look like a commodity.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" style="transition-delay: 0.3s;">
+                    <span class="icon">✕</span>
+                    <h3>You get "send me more info"</h3>
+                    <p>The polite way of saying no. And the conversation dies there forever without a call.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" style="transition-delay: 0.4s;">
+                    <span class="icon">✕</span>
+                    <h3>Hours of outreach. Zero calls.</h3>
+                    <p>Time you will never get back. Working hard on the wrong sequence is just spinning wheels.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" style="transition-delay: 0.5s;">
+                    <span class="icon">✕</span>
+                    <h3>Competitors are landing clients</h3>
+                    <p>It is not your offer. It is the way you start the conversation that decides the finish line.</p>
+                </div>
+            </div>
 
-<script>
-// FAQ
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    const open = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!open) item.classList.add('open');
-  });
-});
+            <div class="gold-border-box conclusion-box" data-aos="zoom-in">
+                It is not your offer. It is not your niche. It is not your profile. It is the sequence.
+            </div>
+        </div>
+    </section>
 
-// SCROLL FADE IN
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+    <!-- 6. The Solution -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-up">
+                <span class="badge">THE SOLUTION</span>
+                <h2 style="font-size: 3.5rem;">Introducing DM to Discovery.</h2>
+                <p style="font-size: 1.5rem; opacity: 0.7;">The LinkedIn Outreach Sequence That Books Calls.</p>
+            </div>
 
-// WEBHOOK + TOPMATE
-const TOPMATE = 'https://topmate.io/sudipta_banerjee11/2059443';
-const WEBHOOK = 'https://primary-production-c187.up.railway.app/webhook/new-buyer';
+            <div class="solution-grid">
+                <div class="solution-card" data-aos="fade-up">
+                    <span class="num">01</span>
+                    <h3>THE CONNECTION MESSAGE</h3>
+                    <p>Not a pitch. A short personalised opener that gets accepted and remembered.</p>
+                </div>
+                <div class="solution-card" data-aos="fade-up" style="transition-delay: 0.1s;">
+                    <span class="num">02</span>
+                    <h3>THE CONVERSATION STARTER</h3>
+                    <p>Creates genuine curiosity about what you do — without selling anything.</p>
+                </div>
+                <div class="solution-card" data-aos="fade-up" style="transition-delay: 0.2s;">
+                    <span class="num">03</span>
+                    <h3>THE SOFT INVITATION</h3>
+                    <p>The natural bridge from conversation to booked discovery call. No pressure.</p>
+                </div>
+            </div>
 
-async function handlePay() {
-  const name     = document.getElementById('inp-name').value.trim();
-  const email    = document.getElementById('inp-email').value.trim();
-  const linkedin = document.getElementById('inp-linkedin').value.trim();
+            <div class="extra-cards">
+                <div class="extra-card" data-aos="fade-left">
+                    <span class="plus">+</span>
+                    <div>
+                        <h4 style="color: var(--accent);">THE RE-ENGAGEMENT MESSAGE</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Gets 40% of cold conversations back without sounding desperate.</p>
+                    </div>
+                </div>
+                <div class="extra-card" data-aos="fade-right">
+                    <span class="plus">+</span>
+                    <div>
+                        <h4 style="color: var(--accent);">THE OBJECTION RESPONSE SHEET</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Word-for-word replies to every common pushback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  if (!name || !email) {
-    alert('Please fill in your name and email above so we can send you the sequence.');
-    document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
-    return;
-  }
+    <!-- 7. What Is Inside -->
+    <section class="dark-section section-padding">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;" data-aos="fade-up">
+                <span class="badge">WHAT YOU GET FOR $9</span>
+                <h2 style="font-size: 3rem;">Everything Inside DM to Discovery.</h2>
+            </div>
 
-  // Fire webhook — never blocks the buyer
-  try {
-    fetch(WEBHOOK, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, linkedin, source: 'landing_page' })
-    });
-  } catch(err) {
-    console.log('Webhook error:', err);
-  }
+            <div class="value-rows">
+                <div class="value-row" data-aos="fade-up">
+                    <div class="row-num">01</div>
+                    <div class="row-content">
+                        <h3>3-Touch DM Sequence</h3>
+                        <p>The core system to turn strangers into booked calls.</p>
+                    </div>
+                    <div class="row-price">$97 value</div>
+                </div>
+                <div class="value-row" data-aos="fade-up">
+                    <div class="row-num">02</div>
+                    <div class="row-content">
+                        <h3>Personalisation Guide</h3>
+                        <p>How to adapt the sequence for any niche in 60 seconds.</p>
+                    </div>
+                    <div class="row-price">$47 value</div>
+                </div>
+                <div class="value-row" data-aos="fade-up">
+                    <div class="row-num">03</div>
+                    <div class="row-content">
+                        <h3>Re-Engagement Message</h3>
+                        <p>The ghosting-killer template for dead threads.</p>
+                    </div>
+                    <div class="row-price">$47 value</div>
+                </div>
+                <div class="value-row" data-aos="fade-up">
+                    <div class="row-num">04</div>
+                    <div class="row-content">
+                        <h3>Objection Response Sheet</h3>
+                        <p>Handle "not interested" or "send info" like a pro.</p>
+                    </div>
+                    <div class="row-price">$27 value</div>
+                </div>
+                <div class="value-row" data-aos="fade-up">
+                    <div class="row-num">05</div>
+                    <div class="row-content">
+                        <h3>Profile Primer Checklist</h3>
+                        <p>Small tweaks to make your profile a conversion machine.</p>
+                    </div>
+                    <div class="row-price">$47 value</div>
+                </div>
+            </div>
 
-  // Always open Topmate
-  window.open(TOPMATE, '_blank');
-}
+            <div class="gold-border-box value-stack-box" data-aos="zoom-in">
+                <div>
+                    <ul>
+                        <li>3-Touch DM Sequence</li>
+                        <li>Personalisation Guide</li>
+                        <li>Re-Engagement Message</li>
+                        <li>Objection Response Sheet</li>
+                        <li>Profile Primer Checklist</li>
+                    </ul>
+                </div>
+                <div class="stack-price">
+                    <span class="total">Total Value: $265</span>
+                    <span class="final">$9</span>
+                </div>
+            </div>
 
-// Main form button
-document.getElementById('pay-btn').addEventListener('click', handlePay);
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#checkout" class="btn">GET EVERYTHING FOR $9 →</a>
+            </div>
+        </div>
+    </section>
 
-// Side panel button
-document.getElementById('pay-btn-side').addEventListener('click', handlePay);
-</script>
+    <!-- 8. Free Audit Call -->
+    <section class="section-padding">
+        <div class="container audit-grid">
+            <div data-aos="fade-right">
+                <span class="badge">YOUR FREE BONUS</span>
+                <h2 style="font-size: 2.8rem;">Every Purchase Includes a FREE 30-Minute LinkedIn Audit Call.</h2>
+                <div style="margin-top: 2rem;">
+                    <p>This is not a sales call.</p>
+                    <p>This is me — personally — reviewing:</p>
+                    <p style="margin-top: 1rem;">→ Your LinkedIn profile</p>
+                    <p>→ Your targeting</p>
+                    <p>→ Your current outreach</p>
+                    <p style="margin-top: 1rem;">You walk away with specific fixes for your industry. Not generic advice. Specific to you.</p>
+                </div>
+                <span class="urgency-text">⚠ Only 8 spots available this month.</span>
+                <span class="badge" style="background: var(--primary-bg); padding: 0.5rem 1rem; border-radius: 4px; color: #fff;">Value: $197 · Your Price: FREE</span>
+            </div>
+            <div data-aos="fade-left">
+                <div class="audit-visual">
+                    <div class="checkmark-circle">✓</div>
+                    <h3>FREE 30-MIN AUDIT CALL</h3>
+                    <ul>
+                        <li>Profile Review <span>✓</span></li>
+                        <li>Targeting Review <span>✓</span></li>
+                        <li>Outreach Review <span>✓</span></li>
+                        <li>Specific Fixes <span>✓</span></li>
+                    </ul>
+                    <div style="margin-top: 2rem; font-family: var(--font-accent); color: var(--accent); font-weight: 700;">NAVY BACKGROUND · GOLD ACCENTS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Guarantee -->
+    <section class="dark-section section-padding">
+        <div class="container guarantee-grid">
+            <div class="guarantee-stamp-container" data-aos="zoom-in">
+                <!-- REPLACE THIS WITH YOUR GUARANTEE STAMP -->
+                <img src="guarantee-stamp.png" alt="30 Day Guarantee" class="guarantee-stamp">
+            </div>
+            <div data-aos="fade-left">
+                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Use It. Get Results. Or Every Penny Back.</h2>
+                <div style="font-size: 1.1rem; opacity: 0.8;">
+                    <p>Take the sequence.</p>
+                    <p>Personalise it for your industry.</p>
+                    <p>Send it to at least 20 people within 30 days.</p>
+                    <p>If you do not book a single discovery call — send me screenshots of your 20 sent messages and I will refund every penny.</p>
+                    <p style="margin-top: 1.5rem;">No drama. No questions. No hoops. I make this guarantee because I use this sequence myself. Every week.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Checkout Form -->
+    <section class="section-padding" id="checkout">
+        <div class="container checkout-grid">
+            <div class="checkout-form" data-aos="fade-up">
+                <span class="badge">STEP 1 — YOUR DETAILS</span>
+                <h2 style="font-size: 3rem; margin-bottom: 1rem;">Get DM to Discovery. Start Booking Calls.</h2>
+                <p style="margin-bottom: 3rem; opacity: 0.7;">Fill in your details below. Takes 30 seconds.</p>
+
+                <form id="lead-form">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>LinkedIn Profile URL</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="linkedin.com/in/yourprofile">
+                    </div>
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <select id="industry" name="industry">
+                            <option value="">Select your industry</option>
+                            <option value="Coaching">Coaching</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Agency">Agency</option>
+                            <option value="Freelance">Freelance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <p class="privacy-note">🔒 Your details are private. We will never share or spam you. Delivered instantly after payment. Questions: sudiptab.digit@gmail.com</p>
+                    
+                    <button type="submit" class="btn" style="width: 100%; font-size: 1.2rem;">STEP 2 — GET INSTANT ACCESS FOR $9 →</button>
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; opacity: 0.6;">Clicking above opens secure Topmate checkout in a new tab</p>
+                </form>
+            </div>
+
+            <div class="price-summary-card" data-aos="fade-left">
+                <h4>TOTAL VALUE: $265</h4>
+                <div class="price">$9</div>
+                <p style="font-family: var(--font-accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 1px;">ONE-TIME · NO SUBSCRIPTION · INSTANT ACCESS</p>
+                
+                <hr style="opacity: 0.1; margin: 1.5rem 0;">
+
+                <ul>
+                    <li>✓ 3-Touch DM Sequence</li>
+                    <li>✓ Personalisation Guide</li>
+                    <li>✓ Re-Engagement Message</li>
+                    <li>✓ Objection Response Sheet</li>
+                    <li>✓ Profile Primer Checklist</li>
+                    <li style="color: var(--accent); font-weight: 700;">★ FREE 30-Min Audit Call</li>
+                </ul>
+
+                <a href="#checkout" class="btn" style="width: 100%;">GET INSTANT ACCESS — $9 →</a>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem; opacity: 0.7;">🔒 Secure checkout via Topmate</p>
+
+                <div class="mini-guarantee">
+                    <strong style="display: block; margin-bottom: 0.5rem; color: #fff;">30-DAY RESULTS GUARANTEE</strong>
+                    Send to 20 people. No calls booked? Show us screenshots. Full refund.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="dark-section section-padding">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="badge">FAQ</span>
+                <h2 style="font-size: 3rem;">Questions. Answered.</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">How fast do I get access after paying?</div>
+                    <div class="faq-answer">Instantly. Payment clears and you get access immediately via Topmate. No manual delivery or waiting for emails.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will this work for my industry?</div>
+                    <div class="faq-answer">Yes — if your clients are on LinkedIn and you sell a service. The personalisation guide adapts the core psychology for any specific B2B niche.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is this just copy-paste templates?</div>
+                    <div class="faq-answer">No. It is a conversation system. You personalise one line per message — that one line is the difference between being ignored and getting a booked discovery call.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How does the 30-day guarantee work?</div>
+                    <div class="faq-answer">Send the sequence to at least 20 targeted prospects within 30 days. If you don't book a single call, send screenshots to sudiptab.digit@gmail.com for a full refund.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What happens on the free audit call?</div>
+                    <div class="faq-answer">A 30-minute Zoom with Sudipta personally. We review your profile, targeting, and outreach. You get specific fixes for your industry. Only 8 spots available this month.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do I need LinkedIn Premium?</div>
+                    <div class="faq-answer">No. This system works perfectly on a completely free LinkedIn account. No expensive monthly subscriptions required.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h4>SUDIPTA BANERJEE</h4>
+                <p>sudiptab.digit@gmail.com</p>
+                <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem;">© 2026 · All rights reserved</p>
+            </div>
+            <div class="footer-right">
+                <p style="opacity: 0.6; font-size: 0.85rem; line-height: 1.4;">Results may vary. The creator personally books 3-5 discovery calls per week using this sequence consistently.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // REPLACE THIS WITH YOUR VIDEO URL (YouTube Embed Link)
+        const VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"; // Example link
+        
+        function handleVideoClick() {
+            const placeholder = document.querySelector('.video-placeholder');
+            placeholder.innerHTML = `<iframe width="100%" height="100%" src="${VIDEO_URL}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top:0; left:0;"></iframe>`;
+        }
+
+        // Navbar Scroll Effect
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Simple AOS (Animate on Scroll) Implementation
+        const aosItems = document.querySelectorAll('[data-aos]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        aosItems.forEach(item => observer.observe(item));
+
+        // Form Submission
+        const form = document.getElementById('lead-form');
+        const TOPMATE_URL = "https://topmate.io/sudipta_banerjee11/2059443";
+        const WEBHOOK_URL = "https://primary-production-c187.up.railway.app/webhook/new-buyer";
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                linkedin: document.getElementById('linkedin').value,
+                industry: document.getElementById('industry').value,
+                source: "landing_page"
+            };
+
+            // Fire and forget webhook
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+                keepalive: true
+            }).catch(err => console.log("Webhook error (ignored):", err));
+
+            // Open Topmate in new tab
+            window.open(TOPMATE_URL, '_blank');
+            
+            // Optional: Show success message or redirect parent
+            alert("Redirecting to secure payment... Please check the new tab.");
+        });
+
+        // Smooth scroll for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
